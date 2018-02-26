@@ -108,10 +108,12 @@ sudo apt install -y --install-suggests guake #Drop down terminal used with F12 -
 sudo apt install -y --install-suggests undistract-me #notifications that watch for long running commands and create a popup when complete
 
 ### Install Alternate Terminal Shells
-#sudo apt install -y --install-suggests zsh #New shell - use exec command to change shells
-#sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh
-#sudo apt install -y fish #New shell - use exec command to change shells
-
+sudo apt install -y --install-suggests zsh #An extended Bourne shell
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh add-on for zsh
+sudo apt install -y fish # friendly interactive shell (fish)
+#exec zsh #temporarily switch shells (ie. zsh)
+chsh -s /bin/bash #change default shell (ie. back to BASH)
+ 
 ### Install Utility applications
 echo ""
 printf "${LGREEN}Installing Utility applications...${NC}\n"
