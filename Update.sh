@@ -205,7 +205,7 @@ printf "${LGREEN}Installing Hex Editors...${NC}\n"
 #sudo apt install -y tweak #text-mode hex editor
 #sudo apt install -y wxhexeditor #hex editor for massive files
 
-### Install Office Applications
+### Install Office applications
 echo ""
 printf "${LGREEN}Installing Office applications...${NC}\n"
 sudo apt install -y libreoffice libreoffice-gnome # LibreOffice Suite
@@ -236,7 +236,7 @@ printf "${LGREEN}Installing Media applications...${NC}\n"
 #sudo apt install -y feh #Lightweight image viewer with command line options to set images as screen background.
 #sudo apt install -y nitrogen #Wallpaper browsing and managing utility
 
-# Text-To-Speech Modules
+# Text-To-Speech modules
 echo ""
 printf "${LGREEN}Installing Text-To-Speech Modules...${NC}\n"
 sudo apt install -y espeak
@@ -251,7 +251,7 @@ sudo apt install -y flite
 #sudo apt install -y v4l-utils
 #sudo modprobe bcm2835-v4l2 # Load webcam driver
 
-# Chat & Email Applications
+# Chat & Email applications
 echo ""
 printf "${LGREEN}Installing Chat & Email Applications...${NC}\n"
 sudo apt install -y mutt # command line email client
