@@ -6,7 +6,7 @@
 sudo apt-get -y install flite #installs flite text-to-speech software
 sudo apt-get install -y fortune-mod #installs MOTD software
 
-flite -voice slt -t "Good Morning Nathan!"
+flite -voice slt -t "Good Morning Nathan!" #hardcode your own name here
 #whoami | flite -voice slt #use the system username instead of hardcoding name
 flite -voice slt -t "Today's date is"
 date +"%A%B%d" | flite -voice slt #day of week and month
