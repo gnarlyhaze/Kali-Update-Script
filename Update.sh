@@ -1,10 +1,9 @@
 #!/bin/bash
 # Created by Nathan Clifford for Sir Sanford Fleming College CSI Students
-# This is the 4th version of this script.
 
 # Description:
 # This script is for updating, and performing basic configurations on Linux
-# distros that use apt as the package manager (ie. Kali, Debian, Raspbian, Ubuntu)
+# distros that use apt as the package manager (ie. Kali, Debian, Raspbian, Ubuntu).
 # This means that if you're using a different package manager such as yum (ie. RedHat, Fedora, OpenSuse)
 # then this script will probably not work on your OS.
 
@@ -103,6 +102,7 @@ sudo apt install -y autocutsel #allows copy and paste text between applications
 echo ""
 printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n"
 sudo apt install -y terminator # My favorite Terminal
+sudo apt install -y lxterminal # A solid Terminal
 sudo apt install -y --install-suggests guake #Drop down terminal used with F12 - Also a favorite
 #sudo apt install --install-suggests yakuake #Light-weight drop down terminal used with F12
 sudo apt install -y --install-suggests undistract-me #notifications that watch for long running commands and create a popup when complete
@@ -285,7 +285,7 @@ sudo apt install -y shutter
 #sudo apt remove -y choosewm #Remove choosewm as sometimes it causes issues.
 
 #update-alternatives --config x-window-manager #command to allow you to choose your window manager. The options so far are gdm3, xfce4, and awesome, MATE, and i3.
-#dpkg-reconfigure gdm3 #command to allow you to choose your login screen. The options so far are gdm, lightdm, and slim.
+#dpkg-reconfigure gdm3 #command to allow you to choose your login screen. The options so far are gdm3, lightdm, and slim.
 
 #Config files are found in /usr/share/xsessions, modify the .desktop files here
 echo ""
@@ -295,35 +295,35 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 sudo apt install -y --install-suggests xfce4 xfce-keyboard-shortcuts kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
 
 #Install Awesome Window Manager:
-sudo apt install -y awesome awesome-extra
+#sudo apt install -y awesome awesome-extra
 
 #Install MATE Desktop Environment
-sudo apt install -y mate-desktop-environment
+#sudo apt install -y mate-desktop-environment
 sudo apt install -y mozo #MATE main menu editing tool
 
 #Install i3 Window Manager #Use WindowsKey+Enter to open a new terminal window
-sudo apt install -y --install-suggests i3
+#sudo apt install -y --install-suggests i3
 #dpkg-reconfigure i3
 #sudo apt install -y feh #Lightweight image viewer with command line options to set images as screen background.
 #sudo apt install -y nitrogen #Wallpaper browsing and managing utility
 
 #Mutter window manager:
-sudo apt install -y --install-suggests mutter #default window manager for gnome
-sudo apt install -y mutter #default window manager for gnome
+#sudo apt install -y --install-suggests mutter #untested option
+#sudo apt install -y mutter #default window manager for gnome
 
 # Login Window Managers:
 #LightDM Login Window Manager
 sudo apt install -y --install-suggests lightdm #lighter window manager default to Kali Light
 
 #Install Slim Login Window Manager
-sudo apt install -y --install-suggests slim
+#sudo apt install -y --install-suggests slim
 
 #GnomeDisplayManager Login Window Manager (GDM3):
 #sudo apt install -y --install-suggests gdm #heavier window manager based on gnome
 sudo apt install -y gdm3 #heavier window manager based on gnome
 
 # Cinnamon
-sudo apt install -y cinnamon-control-center-data #replacement for gdm3
+#sudo apt install -y cinnamon-control-center-data #replacement for gdm3
 #sudo apt install -y --install-suggests cinnamon-control-center-data #untested option
 
 #Kali Linux recommended installs #Enable these options if running Kali Linux to install pentesting utilities
@@ -351,10 +351,10 @@ sudo apt install --install-suggests wireshark wireshark-gtk wireshark-qt # Wires
 #sudo adduser $USER wireshark
 
 #Install & Setup Armitage and Metasploit
-echo ""
-printf "${LGREEN}Installing Armitage and Metasploit...${NC}\n"
-sudo apt install -y metasploit-framework # Metasploit Framework
-sudo apt install -y --install-suggests armitage #Armitage GUI for Metasploit Framework
+#echo ""
+#printf "${LGREEN}Installing Armitage and Metasploit...${NC}\n"
+#sudo apt install -y metasploit-framework # Metasploit Framework
+#sudo apt install -y --install-suggests armitage #Armitage GUI for Metasploit Framework
 #sudo gem install bundler #fix armitage dependencies
 #sudo gem update #fix armitage dependencies
 # Start the PostgreSQL Database
@@ -385,12 +385,14 @@ echo ""
 printf "${LGREEN}Installing Amusing Programs...${NC}\n"
 #sudo apt install -y fortune-mod fortunes-debian-hints #fortunes-mario # These are terminal fortune cookies
 #sudo apt install -y fortunes-off #offensive fortunes
-sudo apt install -y fortunes-min #minimum fortunes
-sudo apt install -y xcowsay #cowsay, this is an important package
-sudo gem install lolcat
+#sudo apt install -y fortunes-min #minimum fortunes #needs to be configured
+#sudo apt install -y xcowsay #cowsay, this is an important package #needs to be configured
+#sudo gem install lolcat
 #sudo apt install -y xfireworks xfishtank # Fireworks/Aquarium in your root window
 
 # Linux Games:
+#echo ""
+#printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 
 ### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
@@ -404,12 +406,12 @@ sudo gem install lolcat
 #Clean-up unused packages
 echo ""
 printf "${LGREEN}Cleaning Up...${NC}\n"
-#sudo apt-get autoclean
+#sudo apt-get autoclean  #untested option
 sudo apt autoremove -y
 
 ### Prompt user to restart system after completing updates
 echo ""
 printf "${LGREEN}Updates Completed - Consider restarting the system!${NC}\n"
 
-#echo "System will reboot in FIVE minutes - please save your work!"
+#printf "${LGREEN}System will reboot automatically in FIVE minutes - please save your work!${NC}\n"
 #sudo sync && sudo shutdown -r +5
