@@ -63,7 +63,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
 
 ### Install aptitude & synaptic, and update aptitude packages (leave enabled):
 echo ""
-printf "${LGREEN}Updating Aptitude & Synaptic...${NC}\n"
+printf "${LGREEN}Installing/Updating Aptitude & Synaptic Package Managers...${NC}\n"
 sudo apt install -y --install-suggests aptitude #aptitude package manager
 sudo aptitude update #update packages in aptitude
 sudo aptitude upgrade --full-resolver #upgrade packages in aptitude
