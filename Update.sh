@@ -31,9 +31,9 @@ NC='\033[0m' # No Color
 #change {TEXTCOLOR} to {RED}, {GREEN}, or {LGREEN} to change text colour.
 
 ### Allow Kali NetworkManager to manage internet connections so they show up in the menu bar:
-head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc/NetworkManager/NetworkManager.conf
-sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf'
-systemctl reload NetworkManager
+head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc/NetworkManager/NetworkManager.conf #remove last line in file
+sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append new last line into file
+systemctl reload NetworkManager #reload the service with new configuration
 
 ### Correct errors from any previously failed installs (leave enabled):
 sudo dpkg --configure -a
