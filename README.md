@@ -3,11 +3,9 @@
 # Created by Nathan Clifford for Fleming College CSI Students
 
 # Usage Instructions:
-Copy this file to a location on your system (ie. ~/Desktop) 
+git clone https://github.com/gnarlyhaze/Kali-Update-Script.git 
 
-Ensure that the file extension is .sh (or use mv Update.txt Update.sh)
-
-cd ~/Desktop
+cd Kali-Update-Script
 
 chmod u+x Update.sh
 
