@@ -3,10 +3,10 @@
 # Created by Nathan Clifford for Fleming College CSI Students
 
 # Usage Instructions:
-Copy this file to a location on your system (ie. ~/Desktop), ensuring that the file extension is .sh
-cd ~/Desktop /n
-chmod u+x Update.sh \n
-sudo ./Update.sh
+Copy this file to a location on your system (ie. ~/Desktop), ensuring that the file extension is .sh,
+cd ~/Desktop, 
+chmod u+x Update.sh,
+sudo ./Update.sh,
 
 # Description:
 This script is for updating, and performing basic configuration on Linux
