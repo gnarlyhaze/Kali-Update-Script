@@ -3,7 +3,9 @@
 # Created by Nathan Clifford for Fleming College CSI Students
 
 # Usage Instructions:
-Copy this file to a location on your system (ie. ~/Desktop), ensuring that the file extension is .sh
+Copy this file to a location on your system (ie. ~/Desktop) 
+
+Ensure that the file extension is .sh (or use mv Update.txt Update.sh)
 
 cd ~/Desktop
 
