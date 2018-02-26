@@ -3,10 +3,12 @@
 # Created by Nathan Clifford for Fleming College CSI Students
 
 # Usage Instructions:
-Copy this file to a location on your system (ie. ~/Desktop), ensuring that the file extension is .sh,
-cd ~/Desktop, 
+Copy this file to a location on your system (ie. ~/Desktop), ensuring that the file extension is .sh
 
-chmod u+x Update.sh,
+cd ~/Desktop
+
+chmod u+x Update.sh
+
 sudo ./Update.sh
 
 # Description:
