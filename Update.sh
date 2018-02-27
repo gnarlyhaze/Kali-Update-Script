@@ -23,6 +23,8 @@
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
 
+apt-get moo # Have you moo'ed today?
+
 # Assign text colour for alert lines:  
 RED='\033[0;31m' # Red
 GREEN='\033[0;32m' # Green
@@ -233,7 +235,8 @@ sudo apt install -y leafpad # Basic text editor
 #sudo apt install -y mousepad #xfce text editor
 #sudo apt install -y kate # Text editor
 #sudo apt install -y joe # Text editor
-#sudo apt install -y install vim # Not fun text editor
+#sudo apt install -y install vim # text editor
+#sudo apt install -y emacs # classic text editor /usr/share/emacs/*/lisp/play contains games
 
 ### Install Office applications:
 echo ""
