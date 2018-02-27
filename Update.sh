@@ -23,6 +23,7 @@
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
 
+# Coax an easter-egg out of apt-get (just for lolz):
 apt-get moo # Have you moo'ed today?
 
 # Assign text colour for alert lines:  
@@ -61,15 +62,29 @@ sudo ntpdate -u ntp.ubuntu.com
 ### Perform System Updates (leave enabled):
 echo ""
 printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
 
-### Install aptitude & synaptic, and update aptitude packages (leave enabled):
+#watch Start Wars in ASCII Art while the updates complete:
+sudo apt install -y telnet
+echo ""
+printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
+x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
+
+### Install Aptitude & Synaptic, and update Aptitude packages (leave enabled):
 echo ""
 printf "${LGREEN}Installing/Updating Aptitude & Synaptic Package Managers...${NC}\n"
-sudo apt install -y --install-suggests aptitude #aptitude package manager
-sudo aptitude update #update packages in aptitude
-sudo aptitude upgrade --full-resolver #upgrade packages in aptitude
-sudo apt install -y synaptic #synaptic package manager
+sudo apt install -y --install-suggests aptitude #Aptitude package manager
+sudo aptitude update #update packages in Aptitude
+sudo aptitude upgrade --full-resolver #upgrade packages in Aptitude
+sudo apt install -y synaptic # Synaptic package manager
+
+# Coax an easter-egg out of Aptitude (just for lolz):
+aptitude help 
+aptitude moo 
+aptitude -v moo
+aptitude -vv moo
+aptitude -vvvvv moo
+aptitude -vvvvvv moo 
 
 ### Install & Run Unattended Upgrades - automatic installation of security upgrades (leave enabled):
 echo ""
@@ -375,6 +390,7 @@ sudo apt install -y tcpdump #command line packet analyzer
 #Kali Linux Utilities:
 echo ""
 printf "${LGREEN}Installing Kali Linux Utilities...${NC}\n"
+sudo apt install -y nmap # network exploration tool to perform security audits
 sudo apt install -y autopsy sleuthkit # Autopsy digital forensics platform
 sudo apt install -y forensics-colorize # show differences between files using color graphics
 #sudo apt install -y --install-suggests john # JohnTheRipper
