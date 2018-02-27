@@ -30,16 +30,16 @@ LGREEN='\033[1;32m' # Light Green
 NC='\033[0m' # No Color
 #change {TEXTCOLOR} to {RED}, {GREEN}, or {LGREEN} to change text colour.
 
-# Watch Disk Usage in a new Terminal window as updates are performed
+# Watch Disk Usage in a new Terminal window as updates are performed:
 printf "${LGREEN}Opening a new Terminal window to watch Disk Usage as updates are installed...${NC}\n"
 x-terminal-emulator --title="Disk Usage" -e watch df -T /root/
 
-### Allow Kali NetworkManager to manage internet connections so they show up in the menu bar (this lines only needs to run one time):
-head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc/NetworkManager/NetworkManager.conf #remove last line in file
-sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append new last line into file
-systemctl reload NetworkManager #reload the service with new configuration
+### Allow Kali's NetworkManager to manage internet interfaces so that they show up in the menu bar (these lines only needs to run one time):
+head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc/NetworkManager/NetworkManager.conf #removes last line in file
+sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append a new last line into the file
+systemctl reload NetworkManager #reload the service with the new configuration
 
-### Correct errors from any previously failed installs (leave enabled):
+### Correct errors from any previously failed installations (leave enabled):
 sudo dpkg --configure -a
 
 # Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
