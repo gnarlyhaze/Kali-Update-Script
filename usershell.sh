@@ -1,14 +1,10 @@
 #!/bin/bash
 # Created by Nathan Clifford
-# This script opens a terminal titled with the current username name at the top.
-
-#sudo apt install -y terminator #installs terminator if you don't already have it.
-#sudo apt install -y lxterminal #installs lxterminal if you don't already have it.
+# This script opens a terminal window titled with the current username with the ~/Desktop of the directory.
 
 # Pass username to terminal title as a variable.
-#USER=Nathan #Hard-code your name instead of using whoami command to discover the current username.
+#USER=Nathan #Hard-code your own name here instead of using the whoami command to discover the current username (which in Kali is probably just root)
 USER=$(whoami)
 
 # Open a terminal with the current username as the title.
-terminator --working-directory=~/Desktop --title="$USER's Shell" 
-#lxterminal --working-directory=~/Desktop --title="$USER's Shell" 
+x-terminal-emulator --working-directory=~/Desktop --title="$USER's Shell" 
