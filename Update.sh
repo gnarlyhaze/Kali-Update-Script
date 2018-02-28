@@ -23,12 +23,19 @@
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
 
-#Show distribution information
+### Correct errors from any previously failed installations (leave enabled):
+sudo dpkg --configure -a
+
+# Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
+#wget -q -O - archive.kali.org/archive-key.asc | apt-key add
+
+# Remove packages left in an "inconsistent state" (incompatible packages which fail to completely install):
+#sudo dpkg --remove --force-remove-reinstreq --force-depends <package-name>
+#sudo apt-get install -f --reinstall <package-name> #reinstall inconsistent state packages.
+
+#Show distribution information:
 sudo apt install -y screenfetch #used to generate one of those nifty terminal theme information + ASCII distribution logos
 screenfetch
-
-# Coax an easter-egg out of apt-get (just for lolz):
-#apt-get moo # Have you moo'ed today?
 
 # Assign text colour for alert lines:  
 RED='\033[0;31m' # Red
@@ -48,15 +55,9 @@ head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc
 sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append a new last line into the file
 systemctl reload NetworkManager #reload the service with the new configuration
 
-### Correct errors from any previously failed installations (leave enabled):
-sudo dpkg --configure -a
-
-# Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
-#wget -q -O - archive.kali.org/archive-key.asc | apt-key add
-
-# Remove packages left in an "inconsistent state" (incompatible packages which fail to completely install):
-#sudo dpkg --remove --force-remove-reinstreq --force-depends <package-name>
-#sudo apt-get install -f --reinstall <package-name> #reinstall inconsistent state packages.
+# Coax an easter-egg out of apt-get (just for lolz):
+echo ""
+apt-get moo # Have you moo'ed today?
 
 ### Install ntpdate internet time and sync time to server (leave enabled):
 echo ""
