@@ -34,7 +34,7 @@ NC='\033[0m' # No Color
 #change {TEXTCOLOR} to {RED}, {GREEN}, or {LGREEN} to change text colour.
 
 # Watch Disk Usage in a new Terminal window as updates are performed:
-printf "${LGREEN}Opening a new Terminal window to watch Disk Usage as updates are installed...${NC}\n"
+printf "${LGREEN}Opening a new Terminal window to watch Disk Usage as updates are installed... Don't run out of space!${NC}\n"
 x-terminal-emulator --title="Disk Usage" -e watch df -T /root/
 
 ### Allow Kali's NetworkManager to manage internet interfaces so that they show up in the menu bar (these lines only needs to run one time):
