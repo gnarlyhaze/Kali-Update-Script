@@ -437,7 +437,7 @@ sudo apt install -y --install-suggests alsa-tools alsa-tools-gui alsa-utils alsa
 sudo apt install -y kmix #audio files
 sudo apt install -y --install-suggests mpg321 #command line mp3 player
 
-# Amusing Programs:
+# Amusing Programs & Linux Games:
 echo ""
 printf "${LGREEN}Installing Amusing Programs...${NC}\n"
 sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
@@ -457,6 +457,9 @@ echo ""
 printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
 sudo apt install -y pacman pacman4console #Pacman
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
+cd /usr/games/ && ./sl
+echo ""
+printf "${LGREEN}Linux Games can be found here...${NC}\n"
 cd /usr/games/ && xdg-open .
 
 ### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
