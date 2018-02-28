@@ -435,7 +435,7 @@ sudo apt install -y --install-suggests mpg321 #command line mp3 player
 # Amusing Programs:
 echo ""
 printf "${LGREEN}Installing Amusing Programs...${NC}\n"
-#sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
+sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
 #sudo apt install -y fortunes-debian-hints
 #sudo apt install -y fortunes-mario 
 #sudo apt install -y fortunes-off #offensive fortunes
