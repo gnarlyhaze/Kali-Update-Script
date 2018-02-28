@@ -275,9 +275,9 @@ sudo apt install -y calcurse #Digital planner
 echo ""
 printf "${LGREEN}Installing Media applications...${NC}\n"
 #sudo apt install -y cmus #Command Line media player -might need to download tarball instead
-#sudo apt install -y clementine #Media player
+sudo apt install -y clementine #Media player
 #sudo apt install -y rhythmbox #Media player
-#sudo apt install -y vlc #VLC Player
+sudo apt install -y vlc #VLC Player
 #sudo apt install -y pinta #Microsoft Paint
 #sudo apt install -y gimp #For editing images
 #sudo apt install -y inkscape #For editing images
