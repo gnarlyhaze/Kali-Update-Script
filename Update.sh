@@ -443,8 +443,9 @@ sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be 
 #sudo apt install -y xcowsay cowsay #this is an important package -needs to be configured in Kali
 #sudo gem install lolcat
 #sudo apt install -y xfireworks xfishtank # Fireworks/Aquarium in your root window
-#sudo apt install -y toilet #used to generate ASCII Art
-#sudo apt install -y figlet #used to generate ASCII Art
+#sudo apt install -y toilet #generates ASCII Art
+#sudo apt install -y figlet #generates ASCII Art
+#sudo apt install -y jp2a #changes any picture that you want into ASCII art
 
 
 # Linux Games:
