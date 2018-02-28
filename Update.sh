@@ -81,6 +81,7 @@ sudo aptitude upgrade --full-resolver #upgrade packages in Aptitude
 sudo apt install -y synaptic # Synaptic package manager
 
 # Coax an easter-egg out of Aptitude (just for lolz): 
+echo ""
 aptitude moo 
 aptitude -v moo
 aptitude -vv moo
