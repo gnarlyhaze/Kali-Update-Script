@@ -59,16 +59,16 @@ sudo apt install -y ntpdate
 sudo ntpdate -u ntp.ubuntu.com
 #dpkg-reconfigure tzdata #manually configure timezone
 
-### Perform System Updates (leave enabled):
-echo ""
-printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
-
 #watch Start Wars in ASCII Art while the updates complete:
 sudo apt install -y telnet
 echo ""
 printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
 x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
+
+### Perform System Updates (leave enabled):
+echo ""
+printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
 
 ### Install Aptitude & Synaptic, and update Aptitude packages (leave enabled):
 echo ""
