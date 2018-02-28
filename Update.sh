@@ -23,8 +23,12 @@
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
 
+#Show distribution information
+sudo apt install -y screenfetch #used to generate one of those nifty terminal theme information + ASCII distribution logos
+screenfetch
+
 # Coax an easter-egg out of apt-get (just for lolz):
-apt-get moo # Have you moo'ed today?
+#apt-get moo # Have you moo'ed today?
 
 # Assign text colour for alert lines:  
 RED='\033[0;31m' # Red
