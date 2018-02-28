@@ -78,8 +78,7 @@ sudo aptitude update #update packages in Aptitude
 sudo aptitude upgrade --full-resolver #upgrade packages in Aptitude
 sudo apt install -y synaptic # Synaptic package manager
 
-# Coax an easter-egg out of Aptitude (just for lolz):
-aptitude help 
+# Coax an easter-egg out of Aptitude (just for lolz): 
 aptitude moo 
 aptitude -v moo
 aptitude -vv moo
