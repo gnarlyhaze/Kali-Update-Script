@@ -34,7 +34,7 @@ sudo dpkg --configure -a
 #sudo apt-get install -f --reinstall <package-name> #reinstall inconsistent state packages.
 
 #Show distribution information:
-sudo apt install -y screenfetch #used to generate one of those nifty terminal theme information + ASCII distribution logos
+sudo apt -qq install -y screenfetch #used to generate one of those nifty terminal theme information + ASCII distribution logos
 screenfetch
 
 # Assign text colour for alert lines:  
@@ -62,12 +62,12 @@ apt-get moo # Have you moo'ed today?
 ### Install ntpdate internet time and sync time to server (leave enabled):
 echo ""
 printf "${LGREEN}Syncing System Clock to Internet Time...${NC}\n"
-sudo apt install -y ntpdate
+sudo apt -qq install -y ntpdate
 sudo ntpdate -u ntp.ubuntu.com
 #dpkg-reconfigure tzdata #manually configure timezone
 
 #watch Start Wars in ASCII Art while the updates complete:
-sudo apt install -y telnet
+sudo apt -qq install -y telnet
 echo ""
 printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
 x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
@@ -452,11 +452,12 @@ sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be 
 #sudo apt install -y figlet #generates ASCII Art
 #sudo apt install -y jp2a #changes any picture that you want into ASCII art
 
-
-# Linux Games:
-#echo ""
-#printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
+# Linux Games (located in /usr/games/):
+echo ""
+printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
+sudo apt install -y pacman pacman4console #Pacman
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
+cd /usr/games/ && xdg-open .
 
 ### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
 #sudo apt  install rpi-update
