@@ -50,7 +50,7 @@ x-terminal-emulator --title="Disk Usage" -e watch df -T /root/
 
 ### Allow Kali's NetworkManager to manage internet interfaces so that they show up in the menu bar (these lines only needs to run one time):
 echo ""
-printf "${LGREEN}Editting NetworkManager to manage network interfaces from the menu icon...${NC}\n"
+printf "${LGREEN}Editing NetworkManager.conf to manage network interfaces from the menu icon...${NC}\n"
 head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc/NetworkManager/NetworkManager.conf #removes last line in file
 sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append a new last line into the file
 systemctl reload NetworkManager #reload the service with the new configuration
