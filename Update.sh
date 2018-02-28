@@ -458,9 +458,11 @@ printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
 sudo apt install -y pacman pacman4console #Pacman
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 cd /usr/games/ && ./sl
-echo ""
-printf "${LGREEN}Linux Games can be found here...${NC}\n"
-cd /usr/games/ && xdg-open .
+
+# Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
+#echo ""
+#printf "${LGREEN}Linux Games can be found here...${NC}\n"
+#cd /usr/games/ && xdg-open .
 
 ### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
 #sudo apt  install rpi-update
