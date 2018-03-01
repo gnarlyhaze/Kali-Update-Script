@@ -34,8 +34,9 @@ sudo dpkg --configure -a
 #sudo apt-get install -f --reinstall <package-name> #reinstall inconsistent state packages.
 
 #Show distribution information:
-sudo apt -qq install -y screenfetch #used to generate one of those nifty terminal theme information + ASCII distribution logos
-screenfetch
+sudo apt -qq install -y screenfetch linuxlogo #used to generate one of those nifty terminal theme information + ASCII distribution logos
+screenfetch #ascii art system info
+#linuxlogo #more ascii art system info
 
 # Assign text colour for alert lines:  
 RED='\033[0;31m' # Red
