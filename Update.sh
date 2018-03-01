@@ -468,7 +468,7 @@ cd /usr/games/ && ./sl
 #printf "${LGREEN}Linux Games can be found here...${NC}\n"
 #cd /usr/games/ && xdg-open .
 
-### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
+### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!! It will break Kali_ARM horribly...
 #sudo apt install -y ca-certificates # resolve issues where GitHub's SSL certificate isn't trusted
 #sudo curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
 #sudo apt install -y rpi-update
