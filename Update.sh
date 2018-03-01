@@ -73,7 +73,10 @@ echo ""
 printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
 x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
 
-### Perform System Updates (leave enabled):
+### Perform System Updates (leave enabled, these are the primary actions of this script):
+### "apt update" downloads a list of updates that are available
+### "sudo apt upgrade -y" upgrades your packages but doesn't remove or install any other packages.
+### "sudo apt full-upgrade -y"  upgrades your packages and installs or removes other packages to resolve dependencies so that all packages are up-to-date.
 echo ""
 printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
 sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
