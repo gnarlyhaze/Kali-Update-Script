@@ -103,6 +103,9 @@ printf "${LGREEN}Installing Security Upgrades...${NC}\n"
 sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
+### Install Python 3:
+#sudo apt install -y python3.6
+
 ###Install SSH client & server
 echo ""
 printf "${LGREEN}Configuring SSH client & server...${NC}\n"
@@ -161,7 +164,6 @@ sudo apt install -y --install-suggests gdebi #GUI for installing .deb files
 sudo apt install -y --install-suggests sysvinit-utils
 sudo apt install -y gnome-tweak-tool #OS option editor
 sudo apt install -y alacarte #Applications menu customization options
-sudo apt install -y mozo #MATE main menu editing tool
 sudo apt install -y orage #Calendar
 sudo apt install -y --install-suggests git git-core #github commandline
 sudo apt install -y --install-suggests zip #shrinks files to send back to C&C server so they can be expanded.
@@ -356,8 +358,7 @@ sudo apt install -y --install-suggests xfce4 xfce-keyboard-shortcuts kali-defaul
 
 #Install MATE Desktop Environment:
 #sudo apt install -y --install-suggests mate-desktop-environment
-#sudo apt install -y mate-dock-applet mate-panel
-#sudo apt install -y mozo #MATE main menu editing tool
+#sudo apt install -y mate-dock-applet mate-panel mozo #mozo is the MATE main menu editing tool
 
 #Install i3 Window Manager (Use WindowsKey+Enter to open a new terminal window):
 #sudo apt install -y --install-suggests i3
