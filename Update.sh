@@ -395,7 +395,7 @@ sudo apt install -y --install-suggests kali-linux-top10 #Install the top ten Kal
 #Install Wireshark Application:
 echo ""
 printf "${LGREEN}Installing Wireshark...${NC}\n"
-sudo apt install --install-suggests wireshark wireshark-gtk wireshark-qt # Wireshark
+sudo apt install -y --install-suggests wireshark wireshark-gtk wireshark-qt # Wireshark
 sudo apt install -y tcpdump #command line packet analyzer
 #sudo dpkg-reconfigure wireshark-common #fix wireshark permission denied errors
 #sudo adduser $USER wireshark
