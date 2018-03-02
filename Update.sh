@@ -25,6 +25,7 @@
 
 ### Correct errors from any previously failed installations (leave enabled):
 sudo dpkg --configure -a
+sudo apt --fix-broken install -y
 
 # Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
 #wget -q -O - archive.kali.org/archive-key.asc | apt-key add
