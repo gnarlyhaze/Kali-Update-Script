@@ -526,9 +526,9 @@ sudo apt autoremove -y
 
 ### Prompt user to restart system after completing updates (leave enabled):
 echo ""
-printf "${LGREEN}Updates Completed - Consider restarting the system!${NC}\n"
 cd /usr/games/ && ./sl 
 cd /usr/games/ && ./xcowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
+printf "${LGREEN}Updates Completed - Consider restarting the system!${NC}\n"
 cd /usr/games/ && ./cowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
 
 #printf "${LGREEN}System will reboot automatically in FIVE minutes - please save your work!${NC}\n"
