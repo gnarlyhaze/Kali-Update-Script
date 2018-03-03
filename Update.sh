@@ -155,7 +155,7 @@ sudo apt install -y --install-suggests zsh #An extended Bourne shell
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh add-on for zsh
 sudo apt install -y fish # friendly interactive shell (fish)
 #exec zsh #syntax to temporarily switch terminal shell (ie. to zsh, bash, sh, or fish)
-#chsh -s $(which zsh) #change default shell to fisk
+#chsh -s $(which fish) #change default shell to fish
 #chsh -s $(which zsh) #change default shell to zsh
 chsh -s /bin/bash #change default shell back to BASH
  
