@@ -4,7 +4,7 @@
 # Description:
 # This script is for updating, and performing basic configurations on Linux
 # distros that use apt as the package manager (ie. Kali, Debian, Raspbian, Ubuntu).
-# This means that if you're using a different package manager such as yum (ie. RedHat, Fedora, OpenSuse)
+# This means that if you're using a different package manager such as yum or zypper (ie. RedHat, Fedora, OpenSuse)
 # then this script will probably not work on your OS.
 
 # Script Usage Instructions:
