@@ -143,10 +143,10 @@ sudo apt install -y autocutsel #allows copy and paste text between applications
 # update-alternatives --config x-terminal-emulator #set a default terminal emulator program
 echo ""
 printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n"
-sudo apt install -y terminator # My favorite Terminal
-sudo apt install -y lxterminal # A solid Terminal
-sudo apt install -y --install-suggests guake #Drop down terminal used with F12 - Also a favorite
-#sudo apt install --install-suggests yakuake #Light-weight drop down terminal used with F12
+sudo apt install -y terminator # My favorite Terminal emulator
+sudo apt install -y lxterminal # Another solid Terminal emulator
+sudo apt install -y --install-suggests guake #Drop down terminal emulator used with F12 - Also a favorite
+#sudo apt install --install-suggests yakuake #Light-weight drop down terminal emulator used with F12
 sudo apt install -y --install-suggests undistract-me #notifications that watch for long running commands and create a popup when complete
 
 ### Install Alternate Terminal Shells
@@ -340,6 +340,8 @@ sudo apt install -y imagemagick
 sudo apt install -y shutter
 #sudo apt install -y gtk-recordmydesktop recordmydesktop #Screen recorder software
 
+
+
 ###Linux Window Managers 
 #update-alternatives --config x-window-manager #command to allow you to choose your window manager. The options so far are gdm3, xfce4, and awesome, MATE, and i3.
 #dpkg-reconfigure gdm3 #command to allow you to choose your login screen. The options so far are gdm3, lightdm, and slim.
@@ -351,15 +353,59 @@ sudo apt install -y shutter
 echo ""
 printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
-#Install xfce4 Window Manager (lightweight window manager):
-sudo apt install -y --install-suggests xfce4 xfce-keyboard-shortcuts kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
+## XFCE Desktop ##
+# Install XFCE Desktop Environment:
+#sudo apt install -y --install-suggests kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+# Remove XFCE:
+#sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
 
+## XFCE Desktop ##
+# Install XFCE Desktop Environment:
+#sudo apt install -y --install-suggests kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+# Remove XFCE:
+#sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
+
+## KDE Desktop ##
+# Install KDE Plasma Desktop Environment:
+#sudo apt install -y kali-defaults kali-root-login desktop-base kde-plasma-desktop
+# Install Standard Debian selected packages and frameworks:
+#sudo apt install -y kali-defaults kali-root-login desktop-base kde-standard
+# Install KDE Full Install:
+#sudo apt install -y kali-defaults kali-root-login desktop-base kde-full
+# Remove KDE:
+#sudo apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+
+## LXDE Desktop ##
+# Install LXDE Desktop Environment:
+#sudo apt install -y kali-defaults kali-root-login desktop-base lxde-core lxde 
+# Remove LXDE:
+#sudo apt-get remove lxde-core lxde
+
+## GNOME Desktop ##
+# How to install GNOME on Kali Linux:
+#sudo apt install -y kali-defaults kali-root-login desktop-base gnome-core 
+# Remove GNOME:
+#sudo apt-get remove gnome-core
+
+## Cinnamon Desktop ##
+# Install Cinnamon Desktop Environment:
+#sudo apt install -y kali-defaults kali-root-login desktop-base cinnamon cinnamon-control-center-data
+# Remove Cinnamon Desktop Environment:
+#apt-get remove cinnamon
+
+## MATE Desktop (1) ##
+#Install MATE Desktop Environment:
+#sudo apt install -y kali-defaults kali-root-login desktop-base mate-core mate-desktop-environment mate-desktop-environment-extra
+#sudo apt install -y mate-dock-applet mate-panel mozo #mozo is the MATE main menu editing tool
+## MATE Desktop (2) ##
+#echo "deb http://repo.mate-desktop.org/debian wheezy main" >> /etc/apt/sources.list && apt-get update
+#apt-get --yes --quiet --allow-unauthenticated install mate-archive-keyring
+# Remove MATE Desktop Environment:
+#apt-get remove mate-core
+
+## Awesome Window Manager ##
 #Install Awesome Window Manager:
 #sudo apt install -y awesome awesome-extra
-
-#Install MATE Desktop Environment:
-#sudo apt install -y --install-suggests mate-desktop-environment
-#sudo apt install -y mate-dock-applet mate-panel mozo #mozo is the MATE main menu editing tool
 
 #Install i3 Window Manager (Use WindowsKey+Enter to open a new terminal window):
 #sudo apt install -y --install-suggests i3
@@ -381,10 +427,6 @@ sudo apt install -y --install-suggests lightdm #lighter window manager default t
 #GnomeDisplayManager Login Window Manager (GDM3):
 #sudo apt install -y --install-suggests gdm #heavier window manager based on gnome
 sudo apt install -y gdm3 #heavier window manager based on gnome
-
-# Cinnamon DisplayManager:
-#sudo apt install -y cinnamon-control-center-data #replacement for gdm3
-#sudo apt install --install-suggests cinnamon-control-center-data #untested option
 
 #Kali Linux recommended installs (Enable these options if running Kali Linux to install pentesting utilities):
 echo ""
