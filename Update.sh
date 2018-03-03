@@ -24,8 +24,8 @@
 #GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
 
 ### Correct errors from any previously failed installations (leave enabled):
-sudo dpkg --configure -a
 sudo apt --fix-broken install -y
+sudo dpkg --configure -a
 
 # Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
 #wget -q -O - archive.kali.org/archive-key.asc | apt-key add
@@ -85,10 +85,10 @@ sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
 ### Install Aptitude & Synaptic, and update Aptitude packages (leave enabled):
 echo ""
 printf "${LGREEN}Installing/Updating Aptitude & Synaptic Package Managers...${NC}\n"
+sudo apt install -y synaptic # Synaptic package manager
 sudo apt install -y --install-suggests aptitude #Aptitude package manager
 sudo aptitude update #update packages in Aptitude
-sudo aptitude upgrade --full-resolver #upgrade packages in Aptitude
-sudo apt install -y synaptic # Synaptic package manager
+sudo aptitude upgrade -y --full-resolver #upgrade packages in Aptitude
 
 # Coax an easter-egg out of Aptitude (just for lolz): 
 echo ""
@@ -105,7 +105,7 @@ sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
 ### Install Python 3:
-#sudo apt install -y python3.6
+sudo apt install -y python3.6
 
 ###Install SSH client & server
 echo ""
@@ -521,7 +521,7 @@ sudo apt install -y sl #terminal steam locamotive
 #Clean-up unused packages (leave enabled):
 echo ""
 printf "${LGREEN}Cleaning Up...${NC}\n"
-#sudo apt-get autoclean  #untested option
+sudo apt autoclean -y
 sudo apt autoremove -y
 
 ### Prompt user to restart system after completing updates (leave enabled):
