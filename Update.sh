@@ -502,7 +502,7 @@ sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be 
 # Linux Games (located in /usr/games/):
 echo ""
 printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
-sudo apt install -y pacman pacman4console #Pacman
+sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 cd /usr/games/ && ./sl
 
