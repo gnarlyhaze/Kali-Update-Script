@@ -504,6 +504,7 @@ echo ""
 printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
 sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
+sudo apt install -y sl #terminal steam locamotive
 cd /usr/games/ && ./sl
 
 # Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
