@@ -170,6 +170,7 @@ sudo apt install -y gnome-tweak-tool #OS option editor
 sudo apt install -y alacarte #Applications menu customization options
 sudo apt install -y orage #Calendar
 sudo apt install -y --install-suggests git git-core #github commandline
+sudo apt install -y ca-certificates # resolve issue where GitHub's SSL certificate isn't trusted
 sudo apt install -y --install-suggests zip #shrinks files to send back to C&C server so they can be expanded.
 #sudo apt install -y file-roller #GUI to open and compress
 sudo apt install -y --install-suggests htop #improved top terminal task manager
@@ -503,18 +504,17 @@ sudo apt install -y sl #terminal steam locamotive
 #printf "${LGREEN}Linux Games can be found here...${NC}\n"
 #cd /usr/games/ && xdg-open .
 
-### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!! It will break Kali_ARM horribly...
-#sudo apt install -y ca-certificates # resolve issues where GitHub's SSL certificate isn't trusted
+### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you know what you are doing!!! It will usually break Kali_ARM horribly...
 #sudo curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
 #sudo apt install -y rpi-update
 #sudo rpi-update
 #sudo sync && sudo reboot
 
-### Overclock Raspberry Pi SD card reader (requires at least a Class 10 U1 MicroSD Card) - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!!
+### Overclock Raspberry Pi SD card reader (requires at least a Class 10 U1 MicroSD Card) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!!
 #sudo bash -c 'printf "dtoverlay=sdhost,overclock_50=100\n" >> /boot/config.txt'
 #sudo sync && sudo reboot
 
-### Create a swap file - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!! (This can make the OS run much quicker):
+### Create a swap file (This can make the OS run much quicker) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!! :
 #sudo dd if=/dev/zero of=/swapfile.img bs=1M count=1024
 #sudo mkswap /swapfile.img
 #chmod 0600 /swapfile.img
