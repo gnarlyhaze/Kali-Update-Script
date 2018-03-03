@@ -501,9 +501,6 @@ sudo apt install -y xcowsay cowsay #this is an important package -needs to be co
 sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 sudo apt install -y sl #terminal steam locamotive
-cd /usr/games/ && ./sl 
-cd /usr/games/ && ./xcowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
-#cd /usr/games/ && ./cowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
 
 # Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
 #echo ""
@@ -530,6 +527,9 @@ sudo apt autoremove -y
 ### Prompt user to restart system after completing updates (leave enabled):
 echo ""
 printf "${LGREEN}Updates Completed - Consider restarting the system!${NC}\n"
+cd /usr/games/ && ./sl 
+cd /usr/games/ && ./xcowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
+cd /usr/games/ && ./cowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
 
 #printf "${LGREEN}System will reboot automatically in FIVE minutes - please save your work!${NC}\n"
 #sudo sync && sudo shutdown -r +5
