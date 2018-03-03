@@ -514,6 +514,13 @@ sudo apt install -y sl #terminal steam locamotive
 #sudo bash -c 'printf "dtoverlay=sdhost,overclock_50=100\n" >> /boot/config.txt'
 #sudo sync && sudo reboot
 
+### Create a swap file - DO NOT ENABLE THIS OPTION unless you have a good reason for doing so!!! (This can make the OS run much quicker):
+#sudo dd if=/dev/zero of=/swapfile.img bs=1M count=1024
+#sudo mkswap /swapfile.img
+#chmod 0600 /swapfile.img
+#sudo swapon /swapfile.img
+#sudo bash -c 'printf "/swapfile.img none swap sw 0 0\n" >> /etc/fstab' #append a new last line into the /etc/fstab file
+
 #Clean-up unused packages (leave enabled):
 echo ""
 printf "${LGREEN}Cleaning Up...${NC}\n"
