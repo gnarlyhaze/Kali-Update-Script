@@ -504,7 +504,7 @@ sudo apt install -y sl #terminal steam locamotive
 #printf "${LGREEN}Linux Games can be found here...${NC}\n"
 #cd /usr/games/ && xdg-open .
 
-### Upgrade Rasberry Pi firmware - DO NOT ENABLE THIS OPTION unless you know what you are doing!!! It will usually break Kali_ARM horribly...
+### Upgrade Rasberry Pi firmware (It will break Kali_ARM horribly) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!!
 #sudo curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
 #sudo apt install -y rpi-update
 #sudo rpi-update
@@ -514,12 +514,12 @@ sudo apt install -y sl #terminal steam locamotive
 #sudo bash -c 'printf "dtoverlay=sdhost,overclock_50=100\n" >> /boot/config.txt'
 #sudo sync && sudo reboot
 
-### Create a swap file (This can make the OS run much quicker) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!! :
+### Create a swap file on flash storage (This can make the Linux OS run much quicker) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!! :
 #sudo dd if=/dev/zero of=/swapfile.img bs=1M count=1024
 #sudo mkswap /swapfile.img
 #chmod 0600 /swapfile.img
 #sudo swapon /swapfile.img
-#sudo bash -c 'printf "/swapfile.img none swap sw 0 0\n" >> /etc/fstab' #append a new last line into the /etc/fstab file
+#sudo bash -c 'printf "/swapfile.img none swap sw 0 0\n" >> /etc/fstab' #append a new last line into the /etc/fstab file - untested
 
 #Clean-up unused packages (leave enabled):
 echo ""
