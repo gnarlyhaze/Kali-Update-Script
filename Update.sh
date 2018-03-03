@@ -354,13 +354,7 @@ sudo apt install -y shutter
 echo ""
 printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
-## XFCE Desktop ##
-# Install XFCE Desktop Environment:
-#sudo apt install -y --install-suggests kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
-# Remove XFCE:
-#sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
-
-## XFCE Desktop ##
+## XFCE Desktop ## This one is my favourite
 # Install XFCE Desktop Environment:
 #sudo apt install -y --install-suggests kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
 # Remove XFCE:
@@ -388,7 +382,7 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 # Remove GNOME:
 #sudo apt-get remove gnome-core
 
-## Cinnamon Desktop ##
+## Cinnamon Desktop ## This is also excellent
 # Install Cinnamon Desktop Environment:
 #sudo apt install -y kali-defaults kali-root-login desktop-base cinnamon cinnamon-control-center-data
 # Remove Cinnamon Desktop Environment:
