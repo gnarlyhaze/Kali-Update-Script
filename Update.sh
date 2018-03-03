@@ -143,9 +143,9 @@ sudo apt install -y autocutsel #allows copy and paste text between applications
 # update-alternatives --config x-terminal-emulator #set a default terminal emulator program
 echo ""
 printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n"
-#sudo apt install -y terminator # My favorite Terminal emulator
-#mkdir /root/.config/terminator/config && cd /root/.config/terminator/config && touch config #configure terminator
-#sudo apt install -y lxterminal # Another solid Terminal emulator
+sudo apt install -y terminator # My favorite Terminal emulator
+mkdir /root/.config/terminator && cp terminator_config /root/.config/terminator/config #configure terminator
+sudo apt install -y lxterminal # Another solid Terminal emulator
 #sudo apt install -y --install-suggests guake #Drop down terminal emulator used with F12 - Also a favorite
 #sudo apt install --install-suggests yakuake #Light-weight drop down terminal emulator used with F12
 sudo apt install -y --install-suggests undistract-me #notifications that watch for long running commands and create a popup when complete
