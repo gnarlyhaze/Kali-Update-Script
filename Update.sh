@@ -151,11 +151,11 @@ sudo apt install -y lxterminal # Another solid Terminal emulator
 sudo apt install -y --install-suggests undistract-me #notifications that watch for long running commands and create a popup when complete
 
 ### Install Alternate Terminal Shells
-sudo apt install -y fish # friendly interactive shell (fish)
+sudo apt install -y fish # the friendly interactive shell (fish)
 sudo apt install -y --install-suggests zsh #An extended Bourne shell
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh add-on for zsh
 
-printf "${LGREEN}Changing your Terminal shell to FISH shell - use "chsh -s bash" or "exec bash" to change back...${NC}\n"
+#printf "${LGREEN}Changing Terminal shell - use "chsh -s bash" or "exec bash" to change back...${NC}\n"
 #exec zsh #syntax to temporarily switch terminal shell (ie. to zsh, bash, sh, or fish)
 #chsh -s $(which fish) #change default shell to fish
 #chsh -s $(which zsh) #change default shell to zsh
