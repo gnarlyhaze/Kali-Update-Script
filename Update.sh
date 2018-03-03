@@ -403,6 +403,10 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 #Install Awesome Window Manager:
 #sudo apt install -y awesome awesome-extra
 
+## FVWM Window Manager ##
+#FVWM Window Manager:
+#sudo apt install -y fvwm --install-suggests
+
 #Install i3 Window Manager (Use WindowsKey+Enter to open a new terminal window):
 #sudo apt install -y --install-suggests i3
 #dpkg-reconfigure i3
