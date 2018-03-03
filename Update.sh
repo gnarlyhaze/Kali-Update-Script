@@ -486,26 +486,24 @@ sudo apt install -y --install-suggests mpg321 #command line mp3 player
 
 # Amusing Programs & Linux Games:
 echo ""
-printf "${LGREEN}Installing Amusing Programs...${NC}\n"
+printf "${LGREEN}Installing Linux Games & Amusing Programs...${NC}\n"
 sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
 #sudo apt install -y fortunes-debian-hints
 #sudo apt install -y fortunes-mario 
 #sudo apt install -y fortunes-off #offensive fortunes
-#sudo apt install -y fortunes-min #minimum fortunes #needs to be configured
-#sudo apt install -y xcowsay cowsay #this is an important package -needs to be configured in Kali
+#sudo apt install -y fortunes-min #minimum fortunes
+sudo apt install -y xcowsay cowsay #this is an important package -needs to be configured in Kali
 #sudo gem install lolcat
 #sudo apt install -y xfireworks xfishtank # Fireworks/Aquarium in your root window
 #sudo apt install -y toilet #generates ASCII Art
 #sudo apt install -y figlet #generates ASCII Art
 #sudo apt install -y jp2a #changes any picture that you want into ASCII art
-
-# Linux Games (located in /usr/games/):
-echo ""
-printf "${LGREEN}Installing Linux-Compatible Games...${NC}\n"
 sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 sudo apt install -y sl #terminal steam locamotive
-cd /usr/games/ && ./sl
+cd /usr/games/ && ./sl 
+cd /usr/games/ && ./xcowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
+#cd /usr/games/ && ./cowsay "Hello $USER! Thanks for waiting - Your updates have completed!" 
 
 # Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
 #echo ""
