@@ -473,7 +473,7 @@ sudo apt install -y forensics-colorize # show differences between files using co
 #printf "${LGREEN}Installing MITM Attack Utilties...${NC}\n"
 #sudo apt install -y bridge-utils #bridge two ethernet ports together for MITM attacks.
 #sudo apt install -y dsniff #ARP spoofing for MITM attacks.
-#sudo apt install -y ettercap ettercap-graphical #Ettercap GUI MITM Attack Suite.
+#sudo apt install -y ettercap-graphical #Ettercap GUI MITM Attack Suite.
 #sudo apt install -y ettercap-text-only #command-line version which consumes less CPU resources.
 #sudo apt install -y sslstrip #prevents SSL encrypted traffic for MITM Attacks
 
