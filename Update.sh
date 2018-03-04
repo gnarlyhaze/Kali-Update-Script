@@ -262,6 +262,7 @@ sudo apt install -y leafpad # Basic text editor
 #sudo apt install -y joe # Text editor
 #sudo apt install -y install vim # text editor
 #sudo apt install -y emacs # classic text editor /usr/share/emacs/*/lisp/play contains games
+#sudo apt install -y kdevelop
 
 ### Install Office applications:
 echo ""
