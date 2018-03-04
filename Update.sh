@@ -393,6 +393,9 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 # Remove MATE Desktop Environment:
 #apt-get remove mate-core
 
+##Budgie Desktop Environment##
+#sudo apt install -y budgie-desktop
+
 ## Awesome Window Manager ##
 #Install Awesome Window Manager:
 #sudo apt install -y awesome awesome-extra
