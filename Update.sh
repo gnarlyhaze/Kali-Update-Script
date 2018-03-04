@@ -443,6 +443,7 @@ sudo apt install -y forensics-colorize # show differences between files using co
 echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
 sudo apt install -y nmap netcat # network exploration tool to perform security audits
+sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool
 
 ##Kali Linux - Bruteforcing Utilities:
 #echo ""
