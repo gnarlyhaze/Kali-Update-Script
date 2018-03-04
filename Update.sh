@@ -235,8 +235,6 @@ printf "${LGREEN}Installing Antivirus & Firewall applications...${NC}\n"
 ### Install Internet applications:
 echo ""
 printf "${LGREEN}Installing Internet applications...${NC}\n"
-#sudo apt install -y openvpn #vpn framework
-#sudo apt install -y squid3 #Squid Proxy
 #sudo apt install -y transmission # Torrent Client
 sudo apt install -y --install-suggests uget #Download Manager
 #sudo apt install -y xdman-downloader #Xtreme Download Manager
@@ -245,13 +243,6 @@ sudo apt install -y --install-suggests uget #Download Manager
 #sudo apt install -y nodejs npm # NodeJS & NPM JavaScript Web Development
 #sudo apt install -y network-manager-gnome #gnome network manager
 #sudo apt install -y wicd wicd-gtk #network manager
-
-### Install Tor Steps:
-#sudo apt install -y tor # Install the tor browser
-#sudo apt install -y sudo
-#adduser tor
-#passwd tor
-#service tor start
 
 # Speedtest Command Line, YoutubeDownloader:
 echo ""
@@ -442,19 +433,40 @@ sudo apt install -y tcpdump #command line packet analyzer
 #sudo dpkg-reconfigure wireshark-common #fix wireshark permission denied errors
 #sudo adduser $USER wireshark
 
-#Kali Linux Utilities:
+##Kali Linux Utilities:
 echo ""
 printf "${LGREEN}Installing Kali Linux Utilities...${NC}\n"
-sudo apt install -y nmap # network exploration tool to perform security audits
 sudo apt install -y autopsy sleuthkit # Autopsy digital forensics platform
 sudo apt install -y forensics-colorize # show differences between files using color graphics
-#sudo apt install -y --install-suggests john # JohnTheRipper
-#sudo apt install -y stunnel4 #Stunnel creates secure communication between a TCP client and server by hiding another SSL envelope
-#sudo apt install -y macchanger #recommended to hide your MAC address while cracking a foreign wireless network.
+
+##Information Gathering/Scanner Utilities:
+echo ""
+printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
+sudo apt install -y nmap netcat # network exploration tool to perform security audits
+
+##Kali Linux - Bruteforcing Utilities:
+#echo ""
+#printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
+#sudo apt install -y --install-suggests john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
+
+##Kali Linux - Anonymizing Utilities:
+#sudo apt install -y openvpn #vpn framework
+#sudo apt install -y squid3 #Squid Proxy
+#sudo apt install -y macchanger #recommended to hide your MAC address while cracking a foreign wireless network.
 #sudo apt install -y proxychains #tunnel kali commands thru proxy server. Hides source IP.
 
-#Install & Setup Armitage and Metasploit:
+### Install Tor Steps:
+#sudo apt install -y tor # Install the tor browser
+#sudo apt install -y sudo
+#adduser tor
+#passwd tor
+#service tor start
+
+##Kali Linux - Vulnerability Analysis Utilities:
+sudo apt install -y nikto #web server testing tool
+
+#Install & Setup Armitage and Metasploit Framework:
 #echo ""
 #printf "${LGREEN}Installing Armitage and Metasploit...${NC}\n"
 #sudo apt install -y metasploit-framework # Metasploit Framework
@@ -469,16 +481,17 @@ sudo apt install -y forensics-colorize # show differences between files using co
 # Start Armitage:
 #armitage
 
-#Kali Linux - MITM Attack Utilties:
+##Kali Linux - MITM Attack Utilties:
 #echo ""
 #printf "${LGREEN}Installing MITM Attack Utilties...${NC}\n"
+#sudo apt install -y stunnel4 #Stunnel creates secure communication between a TCP client and server by hiding another SSL envelope
 #sudo apt install -y bridge-utils #bridge two ethernet ports together for MITM attacks.
 #sudo apt install -y dsniff #ARP spoofing for MITM attacks.
 #sudo apt install -y ettercap-graphical #Ettercap GUI MITM Attack Suite.
-#sudo apt install -y ettercap-text-only #command-line version which consumes less CPU resources.
+#sudo apt install -y ettercap-text-only #command-line version Ettercap which consumes less CPU resources.
 #sudo apt install -y sslstrip #prevents SSL encrypted traffic for MITM Attacks
 
-#Audio Utilities for Kali Linux (Kal's audio often doesn't work without these):
+##Audio Utilities for Kali Linux (Kali's audio often doesn't work without these):
 echo ""
 printf "${LGREEN}Installing Audio Utilities...${NC}\n"
 sudo apt install -y --install-suggests alsa-tools alsa-tools-gui alsa-utils alsa-oss alsamixergui libalsaplayer0 #audio player files
