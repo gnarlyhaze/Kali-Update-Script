@@ -105,7 +105,7 @@ sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
 ### Install Python 3:
-sudo apt install -y python3.6
+sudo apt install -y python3.6 python-pip
 
 ###Install SSH client & server
 echo ""
@@ -211,7 +211,8 @@ sudo apt install -y acpid acpi-support
 ### Docks & Dockapps (may require hiding the native window manager's dock):
 echo ""
 printf "${LGREEN}Installing Docks & Dockapps...${NC}\n"
-#sudo apt install -y --install-suggests cairo-dock cairo-dock-core cairo-clock #dynamic 3D dock, heavier.
+#sudo apt install -y --install-suggests cairo-dock cairo-dock-core cairo-clock cairo-dock-plug-ins #dynamic 3D dock, heavier. 
+#aptitude -r install cairo-dock cairo-dock-plug-ins #install thru aptitude
 #sudo apt install -y plank #simple dock
 #sudo apt install -y mate-dock-applet mate-panel
 #sudo apt install -y docky #powerful, clean dock
@@ -340,6 +341,7 @@ sudo apt install -y shutter
 #dpkg-reconfigure gdm3 #command to allow you to choose your login screen. The options so far are gdm3, lightdm, and slim.
 #Config files are found in /usr/share/xsessions, modify the .desktop files here
 
+#sudo apt install -y glade #Design your own user interface
 #sudo apt install -y choosewm #GUI window upon login to choose your Window Manager
 #sudo apt remove -y choosewm #Remove choosewm as sometimes it causes issues.
 
@@ -370,7 +372,7 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
 ## GNOME Desktop ##
 # How to install GNOME on Kali Linux:
-#sudo apt install -y kali-defaults kali-root-login desktop-base gnome-core 
+#sudo apt install -y kali-defaults kali-root-login desktop-base gnome-core gnome-common
 # Remove GNOME:
 #sudo apt-get remove gnome-core
 
@@ -444,6 +446,9 @@ echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
 sudo apt install -y nmap netcat # network exploration tool to perform security audits
 sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool
+sudo apt install -y masscan #fast port scanner
+sudo apt install -y firewalk #traceroute through firewall and find open ports
+sudo apt install -y p0f #OS fingerprinting tool
 
 ##Kali Linux - Bruteforcing Utilities:
 #echo ""
