@@ -189,6 +189,7 @@ sudo apt install -y di #advanced df like disk information utility
 sudo apt install -y duc # high-performance disk usage analyzer
 sudo apt install -y fatattr fatcat fatsort #utilities for working on FAT filesystems
 #sudo apt install -y bleachbit #delete files securely
+#sudo apt install -y k4dirstat #disk usage statistics viewer and cleanup tool
 
 ### Install Hex Editors:
 echo ""
