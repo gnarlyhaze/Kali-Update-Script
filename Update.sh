@@ -75,9 +75,6 @@ printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
 x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
 
 ### Perform System Updates (leave enabled, these are the primary actions of this script):
-### "apt update" downloads a list of updates that are available
-### "sudo apt upgrade -y" upgrades your packages but doesn't remove or install any other packages.
-### "sudo apt full-upgrade -y"  upgrades your packages and installs or removes other packages to resolve dependencies so that all packages are up-to-date.
 echo ""
 printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
 sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
@@ -105,7 +102,11 @@ sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
 ### Install Python 3:
-sudo apt install -y python3.6 python-pip
+#sudo apt install -y python3 python3-pip python3-dev python3-picamera
+
+### Install Python 2:
+#sudo apt install -y python-pip python-dev 
+#sudo pip install virtualenv
 
 ###Install SSH client & server
 echo ""
@@ -146,20 +147,20 @@ printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n
 sudo apt install -y terminator # My favorite Terminal emulator
 mkdir /root/.config/terminator & cp terminator_config /root/.config/terminator/config #configure terminator
 sudo apt install -y lxterminal # Another solid Terminal emulator
-#sudo apt install -y  guake #Drop down terminal emulator used with F12 - Also a favorite
+sudo apt install -y  guake #Drop down terminal emulator used with F12 - Also a favorite
 #sudo apt install  yakuake #Light-weight drop down terminal emulator used with F12
 sudo apt install -y undistract-me #notifications that watch for long running commands and create a popup when complete
 
 ### Install Alternate Terminal Shells
 sudo apt install -y fish # the friendly interactive shell (fish)
 sudo apt install -y zsh #An extended Bourne shell
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh add-on for zsh
+#sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #Install oh-my-zsh add-on for zsh (run-once)
 
 #printf "${LGREEN}Changing Terminal shell - use "chsh -s bash" or "exec bash" to change back...${NC}\n"
 #exec zsh #syntax to temporarily switch terminal shell (ie. to zsh, bash, sh, or fish)
 #chsh -s $(which fish) #change default shell to fish
 #chsh -s $(which zsh) #change default shell to zsh
-chsh -s /bin/bash #change default shell back to BASH
+sudo chsh -s /bin/bash #change default shell back to BASH
 
 ### Install Utility applications
 echo ""
@@ -172,17 +173,14 @@ sudo apt install -y orage #Calendar
 sudo apt install -y git git-core #github commandline
 sudo apt install -y ca-certificates # resolve issue where GitHub's SSL certificate isn't trusted
 sudo apt install -y zip #shrinks files to send back to C&C server so they can be expanded.
-#sudo apt install -y file-roller #GUI to open and compress
-sudo apt install -y htop #improved top terminal task manager
 sudo apt install -y ack #Grep-like searching utility
-#sudo apt install -y  debian-goodies #Toolbox Utilities for Debian -installs dpigs, checkrestart, debget
-#sudo apt install -y debian-installer-launcher #Bootable Debian Installer #untested
-#sudo apt install -y bilibob bilibob-udev # Device management rules for OS running from external media #script doesnt work
+#sudo apt install -y file-roller #GUI to open and compress
 
-# Autokey text expander application
+### Autokey text expander application
 #sudo apt install -y  autokey-qt autokey-gtk autokey-common #untested
 
 # Disk & File Utiltiies:
+sudo apt install -y htop #improved top terminal task manager
 sudo apt install -y gparted #gparted disk utility
 sudo apt install -y gdisk fdisk #command line disk utilities
 sudo apt install -y di #advanced df like disk information utility
@@ -190,6 +188,11 @@ sudo apt install -y duc # high-performance disk usage analyzer
 sudo apt install -y fatattr fatcat fatsort #utilities for working on FAT filesystems
 #sudo apt install -y bleachbit #delete files securely
 #sudo apt install -y k4dirstat #disk usage statistics viewer and cleanup tool
+
+### Some Random Debian Utilities:
+#sudo apt install -y  debian-goodies #Toolbox Utilities for Debian -installs dpigs, checkrestart, debget
+#sudo apt install -y debian-installer-launcher #Bootable Debian Installer 
+#sudo apt install -y bilibob bilibob-udev # Device management rules for OS running from external media #doesnt seem to work
 
 ### Install Hex Editors:
 echo ""
@@ -417,14 +420,14 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
 ### Login Window Managers:
 #LightDM Login Window Manager
-sudo apt install -y lightdm #lighter window manager default to Kali Light
+#sudo apt install -y lightdm #lighter window manager default to Kali Light
 
 #Install Slim Login Window Manager:
 #sudo apt install -y  slim
 
 #GnomeDisplayManager Login Window Manager (GDM3):
 #sudo apt install -y  gdm #heavier window manager based on gnome
-sudo apt install -y gdm3 #heavier window manager based on gnome
+#sudo apt install -y gdm3 #heavier window manager based on gnome
 
 #Kali Linux recommended installs (Enable these options if running Kali Linux to install pentesting utilities):
 echo ""
@@ -475,7 +478,7 @@ sudo apt install -y p0f #OS fingerprinting tool
 #service tor start
 
 ##Kali Linux - Vulnerability Analysis Utilities:
-sudo apt install -y nikto #web server testing tool
+#sudo apt install -y nikto #web server testing tool
 
 #Install & Setup Armitage and Metasploit Framework:
 #echo ""
@@ -507,7 +510,7 @@ echo ""
 printf "${LGREEN}Installing Audio Utilities...${NC}\n"
 sudo apt install -y  alsa-tools alsa-tools-gui alsa-utils alsa-oss alsamixergui libalsaplayer0 #audio player files
 sudo apt install -y kmix #audio files
-sudo apt install -y  mpg321 #command line mp3 player
+#sudo apt install -y  mpg321 #command line mp3 player
 
 # Amusing Programs & Linux Games:
 echo ""
@@ -523,7 +526,7 @@ sudo apt install -y xcowsay cowsay #this is an important package -needs to be co
 #sudo apt install -y toilet #generates ASCII Art
 #sudo apt install -y figlet #generates ASCII Art
 #sudo apt install -y jp2a #changes any picture that you want into ASCII art
-sudo apt install -y pacman pacman4console #Pacman game
+#sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 sudo apt install -y sl #terminal steam locamotive
 
