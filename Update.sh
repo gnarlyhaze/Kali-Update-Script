@@ -192,7 +192,8 @@ sudo apt install -y orage #Calendar
 sudo apt install -y git git-core #github commandline
 sudo apt install -y ca-certificates # resolve issue where GitHub's SSL certificate isn't trusted
 sudo apt install -y ack #Grep-like searching utility
-sudo apt install -y unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller
+sudo apt install -y unrar unace p7zip zip unzip p7zip-full p7zip-rar file-roller
+#sudo apt install -y rar #no installation candidate
 
 ### Autokey text expander application
 #sudo apt install -y  autokey-qt autokey-gtk autokey-common #untested
