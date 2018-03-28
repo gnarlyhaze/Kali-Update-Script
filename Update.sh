@@ -26,6 +26,7 @@ sudo dpkg --configure -a
 
 #Show distribution information:
 sudo apt -qq install -y screenfetch linuxlogo #used to generate one of those nifty terminal theme information + ASCII distribution logos
+echo ""
 screenfetch #ascii art system info
 #linuxlogo #more ascii art system info
 
@@ -75,7 +76,7 @@ sudo ntpdate -u ntp.ubuntu.com
 #dpkg-reconfigure tzdata #manually configure timezone
 
 # Ensure ntp service runs at bootup
-update-rc.d ntp enable
+#update-rc.d ntp enable
 
 #Watch Start Wars in ASCII Art while the updates complete:
 echo ""
@@ -87,7 +88,7 @@ x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl
 echo ""
 printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
 sudo apt clean
-sudo updatedb && sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
 
 ### Install Aptitude & Synaptic, and update Aptitude packages (leave enabled):
 echo ""
@@ -349,7 +350,7 @@ sudo apt install -y mutt # command line email client
 echo ""
 printf "${LGREEN}Installing Gnome Applications...${NC}\n"
 #sudo apt install -y gnome-core gnome #install full GNOME suite #1.8GB
-#sudo apt install -y gnome-tweak-tool #OS option editor
+sudo apt install -y gnome-tweak-tool #OS option editor
 
 # Gnome Schedule - GUI for crontab:
 #sudo apt install -y gnome-schedule #GUI for crontab ###Script not working
@@ -362,7 +363,7 @@ sudo apt install -y  gnome-screenshot
 sudo apt install -y scrot
 sudo apt install -y imagemagick
 sudo apt install -y shutter
-#sudo apt install -y gtk-recordmydesktop recordmydesktop #Screen recorder software
+sudo apt install -y gtk-recordmydesktop recordmydesktop #Screen recorder software
 
 ###Linux Window Managers 
 #update-alternatives --config x-window-manager #command to allow you to choose your window manager. The options so far are gdm3, xfce4, and awesome, MATE, and i3.
@@ -486,7 +487,7 @@ sudo apt install -y p0f #OS fingerprinting tool
 #printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
 #sudo apt install -y  john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
-#sudo apt install -y install goldendict 
+#sudo apt install -y goldendict 
 #sudo apt install -y rarcrack #untested
 
 ###Kali Linux - Anonymizing Utilities:
@@ -511,7 +512,7 @@ sudo apt install -y p0f #OS fingerprinting tool
 #passwd tor
 #service tor start
 
-### Alternate Tor Steps (untested)
+### Alternate Tor Installation Steps (untested)
 #wget https://www.torproject.org/dist/torbrowser/4.5.3/tor-browser-linux32-4.5.3_en-US.tar.xz
 #tar -xf tor-browser-linux32-4.5.3_en-US.tar.xz
 #cd /root/Desktop/tor-browser_en-US/Browser/
@@ -527,12 +528,12 @@ sudo apt install -y p0f #OS fingerprinting tool
 #sudo apt install -y nikto #web server testing tool
 
 #Install & Setup Armitage and Metasploit Framework:
-#echo ""
-#printf "${LGREEN}Installing Armitage and Metasploit...${NC}\n"
-#sudo apt install -y metasploit-framework # Metasploit Framework
-#sudo apt install -y  armitage #Armitage GUI for Metasploit Framework
-#sudo gem install bundler #fix armitage dependencies
-#sudo gem update #fix armitage dependencies
+echo ""
+printf "${LGREEN}Installing Armitage and Metasploit...${NC}\n"
+sudo apt install -y metasploit-framework # Metasploit Framework
+sudo apt install -y  armitage #Armitage GUI for Metasploit Framework
+sudo gem install bundler #fix armitage dependencies
+sudo gem update #fix armitage dependencies
 
 # Update Metasploit Framework:
 service postgresql start && msfdb init
