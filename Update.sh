@@ -200,6 +200,7 @@ sudo apt install -y unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar f
 sudo apt install -y htop #improved top terminal task manager
 sudo apt install -y gparted #gparted disk utility
 sudo apt install -y gdisk fdisk #command line disk utilities
+sudo apt install -y partitionmanager #KDE Disk utility
 sudo apt install -y di #advanced df like disk information utility
 sudo apt install -y duc # high-performance disk usage analyzer
 sudo apt install -y fatattr fatcat fatsort zerofree #utilities for working on FAT filesystems
