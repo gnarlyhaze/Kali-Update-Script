@@ -72,7 +72,6 @@ systemctl reload NetworkManager #reload the service with the new configuration
 #sed -i 's/false/true/g' /etc/NetworkManager/NetworkManager.txt
 #mv /etc/NetworkManager/NetworkManager.txt /etc/NetworkManager/NetworkManager.conf
 
-
 # Coax an easter-egg out of apt-get (just for lolz):
 echo ""
 apt-get moo # Have you moo'ed today?
@@ -121,6 +120,10 @@ echo ""
 printf "${LGREEN}Installing Security Upgrades...${NC}\n"
 sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
+
+### Install Python and update PIP (it appears the system default is Python 2.7, change this v3 at your own risk):
+echo ""
+printf "${LGREEN}Installing Python2 & Updating PIP...${NC}\n"
 
 ### Install Python 3:
 #sudo apt install -y python3 python3-pip python3-dev python3-picamera
