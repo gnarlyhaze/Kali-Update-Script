@@ -39,6 +39,16 @@ sudo apt -qq install -y screenfetch linuxlogo #used to generate one of those nif
 screenfetch #ascii art system info
 #linuxlogo #more ascii art system info
 
+# Current version info
+echo ""
+printf "${LGREEN}Current version info...${NC}\n"
+lsb_release -i
+lsb_release -r
+lsb_release -d
+lsb_release -c
+printf "Kernal Version: ";uname -r
+printf "Processor Type: ";uname -m
+
 # Assign text colour for alert lines:  
 RED='\033[0;31m' # Red
 GREEN='\033[0;32m' # Green
@@ -57,6 +67,12 @@ head -n -1 /etc/NetworkManager/NetworkManager.conf > temp.txt ; mv temp.txt /etc
 sudo bash -c 'printf "managed=true\n" >> /etc/NetworkManager/NetworkManager.conf' #append a new last line into the file
 systemctl reload NetworkManager #reload the service with the new configuration
 
+### Allow Kali's NetworkManager to manage internet interfaces so that they show up in the menu bar (alternate version):
+#mv /etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.txt
+#sed -i 's/false/true/g' /etc/NetworkManager/NetworkManager.txt
+#mv /etc/NetworkManager/NetworkManager.txt /etc/NetworkManager/NetworkManager.conf
+
+
 # Coax an easter-egg out of apt-get (just for lolz):
 echo ""
 apt-get moo # Have you moo'ed today?
@@ -66,7 +82,11 @@ echo ""
 printf "${LGREEN}Syncing System Clock to Internet Time...${NC}\n"
 sudo apt -qq install -y ntpdate
 sudo ntpdate -u ntp.ubuntu.com
+#sudo ntpdate time.nist.gov #different time server
 #dpkg-reconfigure tzdata #manually configure timezone
+
+# Ensure ntp service runs at bootup
+update-rc.d ntp enable
 
 #watch Start Wars in ASCII Art while the updates complete:
 sudo apt -qq install -y telnet
@@ -77,7 +97,8 @@ x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl
 ### Perform System Updates (leave enabled, these are the primary actions of this script):
 echo ""
 printf "${LGREEN}Performing System Updates - This may take some time...${NC}\n"
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
+sudo apt clean
+sudo updatedb && sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y 
 
 ### Install Aptitude & Synaptic, and update Aptitude packages (leave enabled):
 echo ""
@@ -105,8 +126,11 @@ sudo unattended-upgrades
 #sudo apt install -y python3 python3-pip python3-dev python3-picamera
 
 ### Install Python 2:
-#sudo apt install -y python-pip python-dev 
-#sudo pip install virtualenv
+sudo apt install -y python-pip python-dev 
+sudo pip install virtualenv
+
+#Upgrade PIP
+pip install --upgrade pip
 
 ###Install SSH client & server
 echo ""
@@ -139,6 +163,7 @@ sudo apt install -y autocutsel #allows copy and paste text between applications
 #sudo apt install -y tightvncserver #TightVNC -Kali's default VNC Server
 #sudo apt install -y tightvncclient #TightVNC Client
 #sudo apt install -y remmina # Similar to Windows Remote Desktop functions
+#sudo apt install -y vmfs-tools #untested
 
 ### Install Terminal applications, notification applications
 # update-alternatives --config x-terminal-emulator #set a default terminal emulator program
@@ -172,9 +197,8 @@ sudo apt install -y alacarte #Applications menu customization options
 sudo apt install -y orage #Calendar
 sudo apt install -y git git-core #github commandline
 sudo apt install -y ca-certificates # resolve issue where GitHub's SSL certificate isn't trusted
-sudo apt install -y zip #shrinks files to send back to C&C server so they can be expanded.
 sudo apt install -y ack #Grep-like searching utility
-#sudo apt install -y file-roller #GUI to open and compress
+sudo apt install -y unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller
 
 ### Autokey text expander application
 #sudo apt install -y  autokey-qt autokey-gtk autokey-common #untested
@@ -185,7 +209,7 @@ sudo apt install -y gparted #gparted disk utility
 sudo apt install -y gdisk fdisk #command line disk utilities
 sudo apt install -y di #advanced df like disk information utility
 sudo apt install -y duc # high-performance disk usage analyzer
-sudo apt install -y fatattr fatcat fatsort #utilities for working on FAT filesystems
+sudo apt install -y fatattr fatcat fatsort zerofree #utilities for working on FAT filesystems
 #sudo apt install -y bleachbit #delete files securely
 #sudo apt install -y k4dirstat #disk usage statistics viewer and cleanup tool
 
@@ -240,6 +264,7 @@ printf "${LGREEN}Installing Antivirus & Firewall applications...${NC}\n"
 ### Install Internet applications:
 echo ""
 printf "${LGREEN}Installing Internet applications...${NC}\n"
+#sudo apt install -y  deluge-torrent # Torrent Client
 #sudo apt install -y transmission # Torrent Client
 sudo apt install -y uget #Download Manager
 #sudo apt install -y xdman-downloader #Xtreme Download Manager
@@ -248,6 +273,10 @@ sudo apt install -y uget #Download Manager
 #sudo apt install -y nodejs npm # NodeJS & NPM JavaScript Web Development
 #sudo apt install -y network-manager-gnome #gnome network manager
 #sudo apt install -y wicd wicd-gtk #network manager
+#sudo apt install -y nethogs #untested
+
+sudo apt install -y install flashplugin-nonfree #install flash
+update-flashplugin-nonfree --install #update flash
 
 # Speedtest Command Line, YoutubeDownloader:
 echo ""
@@ -275,9 +304,9 @@ sudo apt install -y libreoffice libreoffice-gnome # LibreOffice Suite
 #sudo apt install -y openoffice # OpenOffice Suite
 #sudo apt install -y abiword #GNOME word document processor
 sudo apt install -y evince #PDF Viewer
-sudo apt install -y kjots #Notes program
-sudo apt install -y granule #Flashcard program for learning new words
-sudo apt install -y calcurse #Digital planner
+sudo apt install -y kjots knotes #Notes program
+#sudo apt install -y granule #Flashcard program for learning new words
+#sudo apt install -y calcurse #Digital planner
 #sudo apt install -y gnumeric #GNOME Spreadsheet Viewer
 #sudo apt install -y glabels #This is for creating labels
 #sudo apt install -y glom #This is for creating databases
@@ -463,12 +492,23 @@ sudo apt install -y p0f #OS fingerprinting tool
 #printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
 #sudo apt install -y  john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
+#sudo apt install -y install goldendict 
+#sudo apt install -y rarcrack #untested
 
-##Kali Linux - Anonymizing Utilities:
-#sudo apt install -y openvpn #vpn framework
+###Kali Linux - Anonymizing Utilities:
 #sudo apt install -y squid3 #Squid Proxy
 #sudo apt install -y macchanger #recommended to hide your MAC address while cracking a foreign wireless network.
 #sudo apt install -y proxychains #tunnel kali commands thru proxy server. Hides source IP.
+
+###VPN
+#sudo apt install -y openvpn #vpn framework
+#sudo apt install -y network-manager-openvpn
+#sudo apt install -y network-manager-openvpn-gnome
+#sudo apt install -y network-manager-pptp
+#sudo apt install -y network-manager-pptp-gnome
+#sudo apt install -y network-manager-strongswan
+#sudo apt install -y network-manager-vpnc
+#sudo apt install -y network-manager-vpnc-gnome
 
 ### Install Tor Steps:
 #sudo apt install -y tor # Install the tor browser
@@ -476,6 +516,18 @@ sudo apt install -y p0f #OS fingerprinting tool
 #adduser tor
 #passwd tor
 #service tor start
+
+### Alternate Tor Steps (untested)
+#wget https://www.torproject.org/dist/torbrowser/4.5.3/tor-browser-linux32-4.5.3_en-US.tar.xz
+#tar -xf tor-browser-linux32-4.5.3_en-US.tar.xz
+#cd /root/Desktop/tor-browser_en-US/Browser/
+#mv start-tor-browser start-tor-browser.txt
+#sed -i 's/`id -u`" -eq 0/`id -u`" -eq 1/g' start-tor-browser.txt
+#mv start-tor-browser.txt start-tor-browser
+#cd ..
+#ls -ld
+#chown -R root:root .
+#ls -ld
 
 ##Kali Linux - Vulnerability Analysis Utilities:
 #sudo apt install -y nikto #web server testing tool
@@ -488,12 +540,23 @@ sudo apt install -y p0f #OS fingerprinting tool
 #sudo gem install bundler #fix armitage dependencies
 #sudo gem update #fix armitage dependencies
 
+# Update Metasploit Framework:
+service postgresql start && msfdb init
+msfdb start && msfdb stop
+msfupdate
+
+### Update Metasploit (alternate version)
+#git clone https://github.com/rapid7/metasploit-framework.git /opt/exploitation/metasploit/
+
 # Start the PostgreSQL Database for Armiteage:
 #systemctl start postgresql
 # Initialize the Metasploit Framework Database:
 #msfdb init
 # Start Armitage:
 #armitage
+
+# Configure postgresql to start on boot
+#update-rc.d postgresql enable
 
 ##Kali Linux - MITM Attack Utilties:
 #echo ""
@@ -505,10 +568,30 @@ sudo apt install -y p0f #OS fingerprinting tool
 #sudo apt install -y ettercap-text-only #command-line version Ettercap which consumes less CPU resources.
 #sudo apt install -y sslstrip #prevents SSL encrypted traffic for MITM Attacks
 
+
+###Update select Kali Utilities:
+echo ""
+printf "${LGREEN}Updating Select Kali Utilities...${NC}\n"
+echo ""
+printf "${LGREEN}Updating WPSCAN...${NC}\n"
+wpscan --update
+echo ""
+printf "${LGREEN}Updating NIKTO...${NC}\n"
+cd /usr/share/golismero/tools/nikto
+perl nikto.pl -update
+echo ""
+printf "${LGREEN}Updating NESSUS...${NC}\n"
+service nessusd stop
+sleep 3
+/opt/nessus/sbin/nessuscli update --all
+sleep 3
+service nessusd start
+
 ##Audio Utilities for Kali Linux (Kali's audio often doesn't work without these):
 echo ""
 printf "${LGREEN}Installing Audio Utilities...${NC}\n"
-sudo apt install -y  alsa-tools alsa-tools-gui alsa-utils alsa-oss alsamixergui libalsaplayer0 #audio player files
+sudo apt install -y alsa-utils #fix sound mute on Kali Linux on boot
+sudo apt install -y  alsa-tools alsa-tools-gui alsa-oss alsamixergui libalsaplayer0 #audio player files
 sudo apt install -y kmix #audio files
 #sudo apt install -y  mpg321 #command line mp3 player
 
@@ -529,11 +612,15 @@ sudo apt install -y xcowsay cowsay #this is an important package -needs to be co
 #sudo apt install -y pacman pacman4console #Pacman game
 #sudo apt install -y fretsonfire fretsonfire-game #Frets on Fire (Guitar Hero Clone) Game
 sudo apt install -y sl #terminal steam locamotive
-
-# Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
+### Open a window to show where Linux games are stored (they're run by prefacing the filename with ./ just like any other program):
 #echo ""
 #printf "${LGREEN}Linux Games can be found here...${NC}\n"
 #cd /usr/games/ && xdg-open .
+
+### Change Kali Login Wallpaper #Place wallpaper that you want to make as Kali Login Wallpaper on Desktop and rename it "login-background.png"
+#cd /usr/share/images/desktop-base/
+#mv login-backgroung.{png,png.bak}
+#mv ~/Desktop/login-background.png /usr/share/images/desktop-base/
 
 ### Upgrade Rasberry Pi firmware (It will break Kali_ARM horribly) - DO NOT ENABLE THIS OPTION unless you know what you are doing!!!
 #sudo curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
