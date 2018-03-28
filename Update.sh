@@ -13,16 +13,6 @@
 # chmod u+x Update.sh
 # sudo ./Update.sh
 
-# GNU Free-Use License (don't blame me if you break something thru use of this script):
-#This program is free software: you can redistribute it and/or modify
-#it under the terms of the GNU General Public License as publ	ished by
-#the Free Software Foundation, either version 3 of the License,
-#or (at your option) any later version.
-#This program is distributed in the hope that it will be useful,
-#but WITHOUT ANY WARRANTY; without even the implied warranty of
-#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#GNU General Public License for more details <https://www.gnu.org/licenses/gpl.txt>
-
 ### Correct errors from any previously failed installations (leave enabled):
 sudo apt --fix-broken install -y
 sudo dpkg --configure -a
@@ -87,11 +77,11 @@ sudo ntpdate -u ntp.ubuntu.com
 # Ensure ntp service runs at bootup
 update-rc.d ntp enable
 
-#watch Start Wars in ASCII Art while the updates complete:
-sudo apt -qq install -y telnet
+#Watch Start Wars in ASCII Art while the updates complete:
 echo ""
 printf "${LGREEN}These updates may take awhile... So here's Star Wars!${NC}\n"
-x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl 
+sudo apt -qq install -y telnet
+x-terminal-emulator --title="Star Wars" -e telnet towel.blinkenlights.nl
 
 ### Perform System Updates (leave enabled, these are the primary actions of this script):
 echo ""
