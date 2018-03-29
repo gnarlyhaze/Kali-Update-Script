@@ -360,11 +360,11 @@ sudo apt install -y gnome-tweak-tool #OS option editor
 #Screenshot Tools
 echo ""
 printf "${LGREEN}Installing Screenshot Tools...${NC}\n"
-sudo apt install -y  gnome-screenshot
+sudo apt install -y gnome-screenshot
 sudo apt install -y scrot
 sudo apt install -y imagemagick
-sudo apt install -y shutter
-sudo apt install -y gtk-recordmydesktop recordmydesktop #Screen recorder software
+#sudo apt install -y shutter
+#sudo apt install -y gtk-recordmydesktop recordmydesktop #Screen recorder software
 
 ###Linux Window Managers 
 #update-alternatives --config x-window-manager #command to allow you to choose your window manager. The options so far are gdm3, xfce4, and awesome, MATE, and i3.
@@ -380,7 +380,7 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
 ## XFCE Desktop ## This one is my favourite
 # Install XFCE Desktop Environment:
-#sudo apt install -y  kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+#sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
 # Remove XFCE:
 #sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
 
@@ -594,11 +594,11 @@ sudo apt install -y kmix #audio files
 # Amusing Programs & Linux Games:
 echo ""
 printf "${LGREEN}Installing Linux Games & Amusing Programs...${NC}\n"
-sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
+#sudo apt install -y fortunes fortune-mod #Terminal fortune cookies -needs to be configured in Kali
 #sudo apt install -y fortunes-debian-hints
 #sudo apt install -y fortunes-mario 
 #sudo apt install -y fortunes-off #offensive fortunes
-#sudo apt install -y fortunes-min #minimum fortunes
+sudo apt install -y fortunes-min #minimum fortunes
 sudo apt install -y xcowsay cowsay #this is an important package -needs to be configured in Kali
 #sudo gem install lolcat
 #sudo apt install -y xfireworks xfishtank # Fireworks/Aquarium in your root window
