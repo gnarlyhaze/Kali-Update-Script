@@ -539,7 +539,8 @@ sudo gem update #fix armitage dependencies
 # Update Metasploit Framework:
 service postgresql start && msfdb init
 msfdb start && msfdb stop
-msfupdate
+#msfupdate
+apt update; apt install metasploit-framework #preferred update syntax
 
 ### Update Metasploit (alternate version)
 #git clone https://github.com/rapid7/metasploit-framework.git /opt/exploitation/metasploit/
