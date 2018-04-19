@@ -18,7 +18,7 @@ sudo apt --fix-broken install -y
 sudo dpkg --configure -a
 
 # Correct "The following signatures were invalid" EXPKEYSIG error upon trying to run updates (This will occur if you haven't updated your Kali ISO for awhile):
-#wget -q -O - archive.kali.org/archive-key.asc | apt-key add
+wget -q -O - archive.kali.org/archive-key.asc | apt-key add
 
 # Remove packages left in an "inconsistent state" (incompatible packages which fail to completely install):
 #sudo dpkg --remove --force-remove-reinstreq --force-depends <package-name>
