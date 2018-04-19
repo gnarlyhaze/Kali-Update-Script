@@ -196,6 +196,7 @@ sudo apt install -y unrar unace p7zip zip unzip p7zip-full p7zip-rar file-roller
 #sudo apt install -y  autokey-qt autokey-gtk autokey-common #untested
 
 # Disk & File Utiltiies:
+sudo apt install -y exfat-fuse #allows exfat fs to be used in Linux
 sudo apt install -y htop #improved top terminal task manager
 sudo apt install -y gparted #gparted disk utility
 sudo apt install -y gdisk fdisk #command line disk utilities
