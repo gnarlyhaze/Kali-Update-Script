@@ -33,10 +33,7 @@ screenfetch #ascii art system info
 # Current version info
 echo ""
 printf "${LGREEN}Current version info...${NC}\n"
-lsb_release -i
-lsb_release -r
-lsb_release -d
-lsb_release -c
+lsb_release -irdc
 printf "Kernal Version: ";uname -r
 printf "Processor Type: ";uname -m
 
