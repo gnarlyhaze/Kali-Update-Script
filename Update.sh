@@ -223,6 +223,7 @@ echo ""
 #sudo apt install -y ncurses-hexedit
 #sudo apt install -y tweak #text-mode hex editor
 #sudo apt install -y wxhexeditor #hex editor for massive files
+#sudo apt install -y hexcompare #shows commonalities and differences between two files
 
 # System Benchmark applications:
 echo ""
