@@ -140,9 +140,9 @@ sudo apt install -y openssh-client
 sudo apt install -y putty #gui ssh client
 
 ###SSH Setup
-#cd /etc/ssh/ && mkdir default_kali_keys && mv ssh_host_* default_kali_keys/ #Move default SSH keys
-#dpkg-reconfigure openssh-server && service ssh restart #Generate new SSH keys
-#service ssh start && update-rc.d -f ssh remove && update-rc.d ssh defaults #start SSH service after reboot by modifying run level settings
+cd /etc/ssh/ && mkdir default_kali_keys && mv ssh_host_* default_kali_keys/ #Move default SSH keys
+dpkg-reconfigure openssh-server && service ssh restart #Generate new SSH keys
+service ssh start && update-rc.d -f ssh remove && update-rc.d ssh defaults #start SSH service after reboot by modifying run level settings
 
 #Add SSH Warning Banner before SSH login
 #nano /etc/issue.net #write your warning message in this file ie. "Authorized access only!"
