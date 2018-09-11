@@ -140,6 +140,8 @@ sudo apt install -y openssh-client
 sudo apt install -y putty #gui ssh client
 
 ###SSH Setup
+echo ""
+printf "${LGREEN}Generating new SSH keys & starting SSH on boot...${NC}\n"
 cd /etc/ssh/ && mkdir default_kali_keys && mv ssh_host_* default_kali_keys/ #Move default SSH keys
 dpkg-reconfigure openssh-server && service ssh restart #Generate new SSH keys
 service ssh start && update-rc.d -f ssh remove && update-rc.d ssh defaults #start SSH service after reboot by modifying run level settings
