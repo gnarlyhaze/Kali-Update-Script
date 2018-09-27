@@ -392,7 +392,8 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
 ## XFCE Desktop ## This one is my favourite
 # Install XFCE Desktop Environment:
-#sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+sudo apt-get install xfce4-whiskermenu-plugin #changes the xfce menu to WhiskerMenu.
 # Remove XFCE:
 #sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
 
@@ -577,8 +578,7 @@ apt update; apt install metasploit-framework #preferred update syntax
 #sudo apt install -y ettercap-text-only #command-line version Ettercap which consumes less CPU resources.
 #sudo apt install -y sslstrip #prevents SSL encrypted traffic for MITM Attacks
 
-
-###Update select Kali Utilities:
+###Update some select Kali Utilities:
 echo ""
 printf "${LGREEN}Updating Select Kali Utilities...${NC}\n"
 echo ""
