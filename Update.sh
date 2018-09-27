@@ -394,6 +394,8 @@ printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 # Install XFCE Desktop Environment:
 sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
 sudo apt-get install xfce4-whiskermenu-plugin #changes the xfce menu to WhiskerMenu.
+#If you wish to change the default, run the following command:
+echo xfce4-session > /root/.xsession
 # Remove XFCE:
 #sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
 
