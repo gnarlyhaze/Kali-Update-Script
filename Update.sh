@@ -390,10 +390,14 @@ sudo apt install -y imagemagick
 echo ""
 printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
-## XFCE Desktop ## This one is my favourite
+## XFCE Desktop ## This is my favourite
 # Install XFCE Desktop Environment:
 sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
 sudo apt-get install xfce4-whiskermenu-plugin #changes the xfce menu to WhiskerMenu.
+
+# Change to xiomd Theme - https://forums.kali.org/showthread.php?27107-Customising-Kali-2-x-XFCE-4-Window-Manager-axiomd-Theme
+curl -s http://pastebin.com/raw.php?i=58wsGhBD | tr -d '\15\32' | bash
+
 #If you wish to change the default, run the following command:
 echo xfce4-session > /root/.xsession
 # Remove XFCE:
