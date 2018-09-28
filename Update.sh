@@ -382,7 +382,6 @@ sudo apt install -y imagemagick
 #update-alternatives --config x-window-manager #command to allow you to choose your window manager. The options so far are gdm3, xfce4, and awesome, MATE, and i3.
 #dpkg-reconfigure gdm3 #command to allow you to choose your login screen. The options so far are gdm3, lightdm, and slim.
 #Config files are found in /usr/share/xsessions, modify the .desktop files here
-
 #sudo apt install -y glade #Design your own user interface
 #sudo apt install -y choosewm #GUI window upon login to choose your Window Manager
 #sudo apt remove -y choosewm #Remove choosewm as sometimes it causes issues.
@@ -390,15 +389,15 @@ sudo apt install -y imagemagick
 echo ""
 printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
-## XFCE Desktop ## This is my favourite
-# Install XFCE Desktop Environment:
+# Install XFCE Desktop Environment: ## This is my favourite
+printf "${LGREEN}Install XFCE Desktop Environment...${NC}\n"
 sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
-sudo apt-get install xfce4-whiskermenu-plugin #changes the xfce menu to WhiskerMenu.
-
+#printf "${LGREEN} Changing the XFCE Default Menu to WhiskerMenu...${NC}\n"
+sudo apt-get install xfce4-whiskermenu-plugin
 # Change to xiomd Theme - https://forums.kali.org/showthread.php?27107-Customising-Kali-2-x-XFCE-4-Window-Manager-axiomd-Theme
 curl -s http://pastebin.com/raw.php?i=58wsGhBD | tr -d '\15\32' | bash
-
-#If you wish to change the default, run the following command:
+#Change default session to XFCE:
+printf "${LGREEN} Changing the default session to XFCE...${NC}\n"
 echo xfce4-session > /root/.xsession
 # Remove XFCE:
 #sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
