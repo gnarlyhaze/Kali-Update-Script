@@ -283,7 +283,7 @@ sudo apt install -y uget #Download Manager
 #sudo apt install -y wicd wicd-gtk #network manager
 #sudo apt install -y nethogs #untested
 
-sudo apt install -y install flashplugin-nonfree #install flash
+sudo apt install -y flashplugin-nonfree #install flash
 update-flashplugin-nonfree --install #update flash
 
 # Speedtest Command Line, YoutubeDownloader:
