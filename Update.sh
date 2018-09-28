@@ -352,9 +352,9 @@ sudo apt install -y flite
 #sudo modprobe bcm2835-v4l2 #Load webcam driver
 
 # Chat & Email applications
-echo ""
-printf "${LGREEN}Installing Chat & Email Applications...${NC}\n"
-sudo apt install -y mutt # command line email client
+#echo ""
+#printf "${LGREEN}Installing Chat & Email Applications...${NC}\n"
+#sudo apt install -y mutt # command line email client
 #sudo apt install -y geary #mail client
 #sudo apt install -y evolution #mail client
 #sudo apt install -y pidgin #chat client
@@ -390,13 +390,16 @@ echo ""
 printf "${LGREEN}Installing Linux Window Managers...${NC}\n"
 
 # Install XFCE Desktop Environment: ## This is my favourite
+echo ""
 printf "${LGREEN}Install XFCE Desktop Environment...${NC}\n"
 sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
+#echo ""
 #printf "${LGREEN} Changing the XFCE Default Menu to WhiskerMenu...${NC}\n"
 sudo apt-get install xfce4-whiskermenu-plugin
 # Change to xiomd Theme - https://forums.kali.org/showthread.php?27107-Customising-Kali-2-x-XFCE-4-Window-Manager-axiomd-Theme
 curl -s http://pastebin.com/raw.php?i=58wsGhBD | tr -d '\15\32' | bash
 #Change default session to XFCE:
+echo ""
 printf "${LGREEN} Changing the default session to XFCE...${NC}\n"
 echo xfce4-session > /root/.xsession
 # Remove XFCE:
