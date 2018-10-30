@@ -394,13 +394,13 @@ echo ""
 printf "${LGREEN}Install XFCE Desktop Environment...${NC}\n"
 sudo apt install -y kali-defaults kali-root-login desktop-base xfce4 xfce-keyboard-shortcuts xfce4-places-plugin xfce4-goodies
 #echo ""
-#printf "${LGREEN} Changing the XFCE Default Menu to WhiskerMenu...${NC}\n"
+#printf "${LGREEN}Changing the XFCE Default Menu to WhiskerMenu...${NC}\n"
 sudo apt-get install xfce4-whiskermenu-plugin
 # Change to xiomd Theme - https://forums.kali.org/showthread.php?27107-Customising-Kali-2-x-XFCE-4-Window-Manager-axiomd-Theme
 curl -s http://pastebin.com/raw.php?i=58wsGhBD | tr -d '\15\32' | bash
 #Change default session to XFCE:
 echo ""
-printf "${LGREEN} Changing the default session to XFCE...${NC}\n"
+printf "${LGREEN}Changing the default session to XFCE...${NC}\n"
 echo xfce4-session > /root/.xsession
 # Remove XFCE:
 #sudo apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
