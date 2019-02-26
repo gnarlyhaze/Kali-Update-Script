@@ -120,7 +120,12 @@ printf "${LGREEN}Installing Security Upgrades...${NC}\n"
 sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
-### Install Python and update PIP (it appears the system default is Python 2.7, change this v3 at your own risk):
+### Install NVIDIA Graphic Card Drivers:
+echo ""
+printf "${LGREEN}Installing NVIDIA Graphic Card Drivers...${NC}\n"
+sudo apt install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
+
+### Install Python and update PIP (it appears the system default is Python 2.7, change this to v3 at your own risk):
 echo ""
 printf "${LGREEN}Installing Python2 & Updating PIP...${NC}\n"
 
