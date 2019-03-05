@@ -497,6 +497,7 @@ sudo apt install -y tcpdump #command line packet analyzer
 ##Kali Linux Utilities:
 echo ""
 printf "${LGREEN}Installing Kali Linux Utilities...${NC}\n"
+sudo apt install -y seclists #multiple types of lists used during security assessments
 sudo apt install -y autopsy sleuthkit # Autopsy digital forensics platform
 sudo apt install -y forensics-colorize # show differences between files using color graphics
 
