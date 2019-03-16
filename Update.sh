@@ -120,6 +120,9 @@ printf "${LGREEN}Installing Security Upgrades...${NC}\n"
 sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
+### Update SearchSploit
+searchsploit -u
+
 ### Install NVIDIA Graphic Card Drivers:
 echo ""
 printf "${LGREEN}Installing NVIDIA Graphic Card Drivers...${NC}\n"
