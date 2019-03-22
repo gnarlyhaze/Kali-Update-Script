@@ -129,7 +129,7 @@ sudo apt install -y nmap netcat # network exploration tool to perform security a
 #sudo apt install -y network-manager-vpnc-gnome
 
 ##Kali Linux - Vulnerability Analysis Utilities:
-#sudo apt install -y nikto #web server testing tool
+sudo apt install -y nikto #web server testing tool
 
 #Install & Setup Armitage and Metasploit Framework:
 echo ""
@@ -210,6 +210,7 @@ echo ""
 printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n"
 sudo apt install -y terminator # My favorite Terminal emulator
 mkdir /root/.config/terminator
+sudo apt install -y bash-completion #a set of bash scripts to enable customized completion for specific commands
 #sudo apt install -y lxterminal # Another solid Terminal emulator
 #sudo apt install -y  guake #Drop down terminal emulator used with F12 - Also a favorite
 #sudo apt install  yakuake #Light-weight drop down terminal emulator used with F12
