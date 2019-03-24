@@ -210,6 +210,7 @@ echo ""
 printf "${LGREEN}Installing Terminal applications and Alternate Shells...${NC}\n"
 sudo apt install -y terminator # My favorite Terminal emulator
 mkdir /root/.config/terminator
+sudo apt install -y asciinema #Records terminal sessions and sharing them on the web, start with "asciinema rec" 
 sudo apt install -y bash-completion #a set of bash scripts to enable customized completion for specific commands
 #sudo apt install -y lxterminal # Another solid Terminal emulator
 #sudo apt install -y  guake #Drop down terminal emulator used with F12 - Also a favorite
