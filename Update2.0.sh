@@ -82,11 +82,13 @@ printf "${LGREEN}Installing Security Upgrades...${NC}\n"
 sudo apt install -y unattended-upgrades
 sudo unattended-upgrades
 
-#Kali Linux recommended installs (Enable these options if running Kali Linux to install pentesting utilities):
+#Kali Linux recommended installs:
 echo ""
 printf "${LGREEN}Installing Kali Linux Recommended Installs...${NC}\n"
+sudo apt install -y open-vm-tools-desktop fuse #VMware tools - https://docs.kali.org/general-use/install-vmware-tools-kali-guest
 sudo apt install -y  kali-linux-top10 #Install the top ten Kali Linux Utilities
 #sudo apt install -y kali-linux-full #full Kali Linux software suite #3GB
+
 
 #Install Wireshark Application:
 echo ""
