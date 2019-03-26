@@ -89,7 +89,6 @@ sudo apt install -y open-vm-tools-desktop fuse #VMware tools - https://docs.kali
 sudo apt install -y  kali-linux-top10 #Install the top ten Kali Linux Utilities
 #sudo apt install -y kali-linux-full #full Kali Linux software suite #3GB
 
-
 #Install Wireshark Application:
 echo ""
 printf "${LGREEN}Installing Wireshark...${NC}\n"
@@ -101,7 +100,7 @@ sudo apt install -y tcpdump #command line packet analyzer
 ##Information Gathering/Scanner Utilities:
 echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
-sudo apt install -y nmap netcat # network exploration tool to perform security audits
+sudo apt install -y nmap netcat ncat # network exploration tool to perform security audits
 #sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool
 #sudo apt install -y masscan #fast port scanner
 #sudo apt install -y firewalk #traceroute through firewall and find open ports
@@ -171,7 +170,7 @@ sudo pip install virtualenv
 #Upgrade PIP
 pip install --upgrade pip
 
-###Install SSH client & servernano /etc/motd 
+###Install SSH client & server
 echo ""
 printf "${LGREEN}Configuring SSH client & server...${NC}\n"
 sudo apt install -y ssh #install and enable sshd
@@ -236,6 +235,7 @@ printf "${LGREEN}Installing Utility applications...${NC}\n"
 sudo apt install -y gparted #gparted disk utility
 sudo apt install -y speedtest-cli #speedtest from command line
 sudo apt install -y gdebi #GUI for installing .deb files
+sudo apt install -y ipcalc #calculate IP information for a host
 sudo apt install -y sysvinit-utils
 sudo apt install -y gnome-tweak-tool #OS option editor
 sudo apt install -y alacarte #Applications menu customization options
