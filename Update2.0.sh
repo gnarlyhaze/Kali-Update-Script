@@ -227,7 +227,7 @@ sudo apt install -y zsh #An extended Bourne shell
 #exec zsh #syntax to temporarily switch terminal shell (ie. to zsh, bash, sh, or fish)
 #chsh -s $(which fish) #change default shell to fish
 #chsh -s $(which zsh) #change default shell to zsh
-sudo chsh -s /bin/bash #change default shell back to BASH
+#chsh -s /bin/bash #change default shell back to BASH
 
 ### Install Utility applications
 echo ""
