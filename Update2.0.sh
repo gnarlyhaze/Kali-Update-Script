@@ -195,14 +195,14 @@ service ssh start && update-rc.d -f ssh remove && update-rc.d ssh defaults #star
 #nano /etc/motd ##write your warning message in this file ie. "Welcome back to your system!"
 
 ### VNC client & server applications
-#echo ""
-#printf "${LGREEN}Installing VNC client & server applications...${NC}\n"
+echo ""
+printf "${LGREEN}Installing VNC client & server applications...${NC}\n"
 #sudo apt install -y autocutsel #allows copy and paste text between applications
 #sudo apt install -y x11vnc #Simple VNC Server
 #x11vnc -storepasswd # Assign a VNC password for x11vnc
 #sudo apt install -y tightvncserver #TightVNC -Kali's default VNC Server
 #sudo apt install -y tightvncclient #TightVNC Client
-#sudo apt install -y remmina # Similar to Windows Remote Desktop functions
+sudo apt install -y remmina # Similar to Windows Remote Desktop functions
 #sudo apt install -y vmfs-tools #untested
 
 ### Install Terminal applications, notification applications
