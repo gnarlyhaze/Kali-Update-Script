@@ -108,7 +108,7 @@ sudo apt install -y nmap netcat ncat # network exploration tool to perform secur
 
 ##Kali Linux - Bruteforcing Utilities:
 echo ""
-printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
+printf "${LGREEN}Installing Bruteforcing Utilities...${NC}\n"
 sudo apt install -y gobuster #tool used to brute-force URIs (directories and files) in web sites and DNS subdomains.
 sudo apt install -y hydra #parallelized login cracker
 sudo apt install -y ncrack #network authentication cracking tool
@@ -165,7 +165,7 @@ sudo apt install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
 ### Install Python and update PIP (it appears the system default is Python 2.7, change this to v3 at your own risk):
 ###DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
 echo ""
-printf "${LGREEN}Installing Python2 & Updating PIP...${NC}\n"
+printf "${LGREEN}Installing Python2 & Upgrading PIP...${NC}\n"
 ### Install Python 2:
 sudo apt install -y python-pip python-dev 
 sudo apt install -y software-properties-common
