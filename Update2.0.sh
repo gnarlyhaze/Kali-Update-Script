@@ -235,6 +235,7 @@ sudo apt install -y zsh #An extended Bourne shell
 ### Install Utility applications
 echo ""
 printf "${LGREEN}Installing Utility applications...${NC}\n"
+sudo apt install -y filezilla #GUI ftp client
 sudo apt install -y needrestart needrestart-session #check which daemons need to be restarted after library upgrades
 sudo apt install -y gparted #gparted disk utility
 sudo apt install -y speedtest-cli #speedtest from command line
