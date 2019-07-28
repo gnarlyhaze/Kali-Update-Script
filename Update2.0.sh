@@ -107,8 +107,11 @@ sudo apt install -y nmap netcat ncat # network exploration tool to perform secur
 #sudo apt install -y p0f #OS fingerprinting tool
 
 ##Kali Linux - Bruteforcing Utilities:
-#echo ""
-#printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
+echo ""
+printf "${LGREEN}Bruteforcing Utilities...${NC}\n"
+sudo apt install -y gobuster #tool used to brute-force URIs (directories and files) in web sites and DNS subdomains.
+sudo apt install -y hydra #parallelized login cracker
+sudo apt install -y ncrack #network authentication cracking tool
 #sudo apt install -y  john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
 #sudo apt install -y goldendict 
