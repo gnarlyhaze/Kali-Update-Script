@@ -86,8 +86,8 @@ sudo unattended-upgrades
 echo ""
 printf "${LGREEN}Installing Kali Linux Recommended Installs...${NC}\n"
 sudo apt install -y open-vm-tools-desktop fuse #VMware tools - https://docs.kali.org/general-use/install-vmware-tools-kali-guest
-sudo apt install -y  kali-linux-top10 #Install the top ten Kali Linux Utilities
-#sudo apt install -y kali-linux-full #full Kali Linux software suite #3GB
+sudo apt install -y  kali-tools-top10 #Install the top ten Kali Linux Utilities
+#sudo apt install -y kali-linux-large #full Kali Linux software suite #3GB
 
 #Install Wireshark Application:
 echo ""
@@ -100,11 +100,13 @@ sudo apt install -y tcpdump #command line packet analyzer
 ##Information Gathering/Scanner Utilities:
 echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
-sudo apt install -y nmap netcat ncat # network exploration tool to perform security audits
-#sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool
-#sudo apt install -y masscan #fast port scanner
-#sudo apt install -y firewalk #traceroute through firewall and find open ports
-#sudo apt install -y p0f #OS fingerprinting tool
+sudo apt install -y nmap ncat  # network exploration tool to perform security audits.
+sudo apt install netcat netcat-traditional #port scanning, transferring files, and port listening utility.
+#sudo apt install netcat-openbsd #rewrite of netcat for support of IPv6, proxies, and Unix sockets.
+#sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool.
+#sudo apt install -y masscan #fast port scanner.
+#sudo apt install -y firewalk #traceroute through firewall and find open ports.
+#sudo apt install -y p0f #OS fingerprinting tool.
 
 ##Kali Linux - Bruteforcing Utilities:
 echo ""
