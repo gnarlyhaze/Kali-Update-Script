@@ -101,8 +101,8 @@ sudo apt install -y tcpdump #command line packet analyzer
 echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
 sudo apt install -y nmap ncat  # network exploration tool to perform security audits.
-sudo apt install netcat netcat-traditional #port scanning, transferring files, and port listening utility.
-#sudo apt install netcat-openbsd #rewrite of netcat for support of IPv6, proxies, and Unix sockets.
+sudo apt install -y netcat netcat-traditional #port scanning, transferring files, and port listening utility.
+#sudo apt install -y netcat-openbsd #rewrite of netcat for support of IPv6, proxies, and Unix sockets.
 #sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool.
 #sudo apt install -y masscan #fast port scanner.
 #sudo apt install -y firewalk #traceroute through firewall and find open ports.
@@ -114,6 +114,7 @@ printf "${LGREEN}Installing Bruteforcing Utilities...${NC}\n"
 sudo apt install -y gobuster #tool used to brute-force URIs (directories and files) in web sites and DNS subdomains.
 sudo apt install -y hydra #parallelized login cracker
 sudo apt install -y ncrack #network authentication cracking tool
+sudo apt install -y seclists
 #sudo apt install -y  john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
 #sudo apt install -y goldendict 
