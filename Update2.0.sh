@@ -114,7 +114,7 @@ printf "${LGREEN}Installing Bruteforcing Utilities...${NC}\n"
 sudo apt install -y gobuster #tool used to brute-force URIs (directories and files) in web sites and DNS subdomains.
 sudo apt install -y hydra #parallelized login cracker
 sudo apt install -y ncrack #network authentication cracking tool
-sudo apt install -y seclists
+sudo apt install -y seclists #collection of wordlists used during security assessments
 #sudo apt install -y  john # JohnTheRipper -fast password cracker
 #sudo apt install -y cewl #Custom Wordlist Generator allows you to create your own custom dictionary file.
 #sudo apt install -y goldendict 
