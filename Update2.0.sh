@@ -1,5 +1,5 @@
 #!/bin/bash
-# Created by Nathan Clifford for OSCP Coursework
+# Created for OSCP Coursework
 
 # Description:
 # This script is for updating, and performing basic configurations on Linux
