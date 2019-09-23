@@ -102,6 +102,7 @@ echo ""
 printf "${LGREEN}Installing Scanning Utilities...${NC}\n"
 sudo apt install -y nmap ncat  # network exploration tool to perform security audits.
 sudo apt install -y netcat netcat-traditional #port scanning, transferring files, and port listening utility.
+sudo apt install -y iptables
 #sudo apt install -y netcat-openbsd #rewrite of netcat for support of IPv6, proxies, and Unix sockets.
 #sudo apt install -y 0trace # security reconnaissance/firewall bypassing tool.
 #sudo apt install -y masscan #fast port scanner.
