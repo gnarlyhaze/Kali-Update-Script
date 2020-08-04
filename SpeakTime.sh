@@ -1,5 +1,4 @@
 #!/bin/bash
-# Created by Nathan Clifford
 # This program uses text-to-speech utilities to say the current time.
 # I use crontab to schedule this script to run each hour.
 
