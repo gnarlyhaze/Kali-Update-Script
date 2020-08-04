@@ -1,7 +1,4 @@
 # Kali-Update-Script
-
-# Created by Nathan Clifford for Fleming College CSI Students
-
 # Usage Instructions (enter these commands into a terminal on the Linux system that you wish to update):
 
 git clone https://github.com/gnarlyhaze/Kali-Update-Script.git 
