@@ -1,5 +1,4 @@
 #!/bin/bash
-# Created by Nathan Clifford for Sir Sanford Fleming College CSI Students
 
 # Description:
 # This script is for updating, and performing basic configurations on Linux
